@@ -31,8 +31,9 @@ ORDINA turns microbiome–disease association *evidence* into an **organism-reso
 | [`docs/03_layer_factory_and_catalog.md`](docs/03_layer_factory_and_catalog.md) | The layer factory contract and the curated, pruned layer catalog. |
 | [`docs/04_analysis_and_discovery.md`](docs/04_analysis_and_discovery.md) | General ways to mine the multiplex for novel findings. |
 | [`docs/05_validation.md`](docs/05_validation.md) | How to tell real signal from artifact. |
-| [`docs/06_open_questions.md`](docs/06_open_questions.md) | Honest unknowns to resolve as the plan matures. |
+| [`docs/06_open_questions.md`](docs/06_open_questions.md) | Honest unknowns (most now resolved in 08). |
 | [`docs/07_stack.md`](docs/07_stack.md) | Technology stack: frontend, backend, database, graph/analysis libs, orchestration. |
+| [`docs/08_decisions.md`](docs/08_decisions.md) | Resolved decisions: first goal, dual-rank, MONDO, co-occurrence promoted to core. |
 | [`docs/refs.md`](docs/refs.md) | Bibliography. |
 
 ## Status of decisions

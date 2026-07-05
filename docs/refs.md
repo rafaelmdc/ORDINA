@@ -23,6 +23,9 @@ Numbering is stable across all docs. Where I am not certain of exact bibliograph
 19. **STRING** — Szklarczyk D. et al. *The STRING database: protein–protein association networks.* Nucleic Acids Research. https://string-db.org
 20. **Abundance / co-occurrence datasets** — Thompson L. et al. *A communal catalogue reveals Earth's multiscale microbial diversity (Earth Microbiome Project)*, Nature 2017, https://doi.org/10.1038/nature24621 · MicrobeAtlas, https://microbeatlas.org
 21. **PubTator 3.0** — Wei C.-H. et al. *PubTator 3.0: an AI-powered literature resource for unlocking biomedical knowledge.* Nucleic Acids Research, 2024. https://doi.org/10.1093/nar/gkae235 · Europe PMC, https://europepmc.org
+22. **Compositional co-occurrence network inference** — Kurtz Z. et al. *SPIEC-EASI: sparse and compositionally robust inference of microbial ecological networks*, PLoS Comput Biol 2015, https://doi.org/10.1371/journal.pcbi.1004226 · Friedman J., Alm E. *SparCC*, PLoS Comput Biol 2012, https://doi.org/10.1371/journal.pcbi.1002687 · Tackmann J. et al. *FlashWeave*, Cell Systems 2019, https://doi.org/10.1016/j.cels.2019.08.002
+23. **curatedMetagenomicData** — Pasolli E. et al. *Accessible, curated metagenomic data through ExperimentHub.* Nat Methods, 2017. https://doi.org/10.1038/nmeth.4468 · https://waldronlab.io/curatedMetagenomicData
+24. **MONDO** — Vasilevsky N. et al. *Mondo: Unifying diseases for the world, by the world.* (Monarch Initiative unified disease ontology.) https://mondo.monarchinitiative.org
 
 ---
 

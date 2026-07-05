@@ -11,6 +11,10 @@
 
 Every validation below targets one or more of these.
 
+## 0. Recovery-first (the iteration-1 headline)
+
+Per [`08`](08_decisions.md) A1, the first thing ORDINA must show is **recovery of known associations that beats the phylogeny null on a held-out split**, with each recovered association annotated by the layers that explain it. This is the credibility gate: nothing about novel prediction is trustworthy until recovery is demonstrated. The recovery metric (held-out recall/precision vs the null) is the operational definition of "the multiplex works."
+
 ## 1. Phylogeny null (the mandatory baseline)
 
 **Test:** compare every module, congruent edge, and prediction against what the **GTDB phylogeny layer** alone would produce, and against **degree-preserving randomization** (configuration-model rewiring that keeps each node's degree per layer) [[6]](refs.md).
@@ -38,6 +42,13 @@ Every validation below targets one or more of these.
 
 **Establishes:** weak, cheap corroboration and useful triage.
 **Cannot establish:** much on its own — co-mention is not association, and using literature co-occurrence both as evidence *and* (via MINERVA-style resources) as a comparator risks **circularity and literature bias**. Explicitly treated as a soft signal, never a ground truth.
+
+## 4b. Predicted-vs-observed interaction congruence (internal cross-layer check)
+
+A validation unique to having both a *predicted* and an *observed* interaction layer: the **metabolic layer predicts** organism interaction (complementarity/exchange), and the **co-occurrence layer observes** it (co-variation across samples) ([`08`](08_decisions.md) C1). Their **congruence is a strong internal check** — predicted interactions that are also observed, and vice versa, are far more credible than either alone; systematic disagreement flags either a modelling artifact or a genuinely interesting context-dependence.
+
+**Establishes:** cross-modality corroboration of interaction claims without any external data.
+**Cannot establish:** direction/causation, or interactions real in a context not represented in the sampled abundance data.
 
 ## 5. Negative controls and sanity checks
 

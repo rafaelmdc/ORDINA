@@ -29,6 +29,14 @@ To enlarge and cross-check the disease signal (these feed Mind and validation, *
 
 Using more than one curated source lets ORDINA measure **cross-source concordance** for each association — a validation signal Disbiome alone cannot provide.
 
+### Disease vocabulary: MONDO
+
+Sources use different disease vocabularies (Disbiome uses MedDRA). Mind **standardizes all of them onto MONDO** ([`08`](08_decisions.md) D1), mapping MedDRA and the other sources' codes into MONDO while **keeping source-native codes as provenance**. MONDO's cross-references (MedDRA/DO/EFO/OMIM) make the mapping tractable, and a common disease space is what makes cross-source concordance meaningful.
+
+### Abundance tables (for the co-occurrence layer)
+
+Because abundance co-occurrence is now a **core** Retes layer ([`03`](03_layer_factory_and_catalog.md), [`08`](08_decisions.md) C1), Mind must also ingest **per-sample abundance profiles** — from `curatedMetagenomicData` and GMrepo (human-gut-relevant), with MicrobeAtlas for breadth. These are staged like any other source (raw → reviewed), and feed a network-inference pipeline step rather than becoming findings directly.
+
 ## Mapping onto the existing schema
 
 The current Django model already expresses the right shape (see `innovhealth_microbiome/database/models.py`, `docs/schema.md`):

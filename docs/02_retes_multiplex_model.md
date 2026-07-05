@@ -18,7 +18,7 @@ This is fundamentally different from a **heterogeneous / multilayer network** (�
 ## 2. Node semantics
 
 - **One organism = one node.** Node identity is the canonical `Taxon` (NCBI-normalized; GTDB-aligned where possible — see [`03`](03_layer_factory_and_catalog.md)). Direction of a disease effect, conflict between studies, and evidence counts are **edge/annotation properties**, never separate nodes. This fixes the current codebase's enriched/depleted node duplication.
-- **Node resolution / rank.** Nodes are anchored at a chosen taxonomic rank. Disbiome findings arrive at mixed ranks (species to phylum). `TaxonClosure` supports rolling findings up to a common rank. The multiplex must declare its **operating rank** (proposal: species where available, genus as fallback) and record when a node is a rollup, because different layers have different native ranks (metabolic models are strain/genome-level; traits are often species; disease findings are mixed). Rank-mismatch handling is an open question ([`06`](06_open_questions.md)).
+- **Node resolution / rank — dual-rank** ([`08`](08_decisions.md) B1). Nodes are maintained at **both genus and species**. **Primary analysis runs at genus** (most robust, best coverage), with **drill-down to species** where data supports it. `TaxonClosure` handles rollup, and rollup must **preserve and surface species-level contradictions** (a genus can look neutral while its species disagree — that disagreement is a finding, not noise), never average them away. Every layer declares its native rank and an explicit genus-aggregation rule, because layers differ (metabolic models are strain/genome-level; traits are often species; disease findings are mixed).
 
 ## 3. Edge semantics
 

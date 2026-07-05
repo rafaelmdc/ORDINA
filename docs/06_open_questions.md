@@ -2,6 +2,8 @@
 
 The honest unknowns. These are the decisions to resolve as the plan matures and as real data arrives — recorded now so they are not quietly assumed away.
 
+> **Status:** most of these are now **resolved in [`08_decisions.md`](08_decisions.md)**. Quick map: #1→08 B4, #2→08 B2, #3→08 B1 (dual-rank), #4→08 B3, #5→08 A3, #6 (multiple testing)→[`07`](07_stack.md)/analysis (permutation + pre-registered FDR), #7→[`05`](05_validation.md) §4 firewall, #8→08 D2 (coverage audit — an action), #9→08 C1 (co-occurrence promoted to core), #10→08 D1 (MONDO), #11 still open (Flux/Curia, deferred), #12→08 A2. The original text is kept below for the reasoning trail.
+
 ## Modelling
 
 1. **Multiplex vs heterogeneous — the final call.** [`02`](02_retes_multiplex_model.md) starts organism-centric multiplex with a bipartite disease coupling, and keeps the full heterogeneous-multilayer (Hetionet-style) as a documented pivot. The trigger for pivoting — e.g. needing pathways/metabolites as first-class prediction endpoints — must be made explicit before it happens, not drifted into.

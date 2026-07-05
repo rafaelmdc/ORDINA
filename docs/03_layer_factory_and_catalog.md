@@ -8,7 +8,8 @@ A **layer** is not just "some edges". It is a reproducible object produced by a 
 
 | Element | What it specifies |
 |---|---|
-| **Node mapping** | How the layer's native entities map onto canonical taxa `V` (and at which rank; how rollup is handled). |
+| **Node mapping** | How the layer's native entities map onto canonical taxa `V`. |
+| **Native rank + aggregation rule** | The rank the layer's data natively lives at (genome/strain, species, mixed), and the explicit rule for aggregating it to the **genus** primary-analysis rank while preserving species-level detail. Mandatory under the dual-rank decision ([`08`](08_decisions.md) B1). |
 | **Braidworks path** | The concrete strand→strand route through Braidworks weavers that fetches the raw data (e.g. `taxon → genome → reactions`). New weavers are built on demand. |
 | **Edge-construction rule** | When two organisms get an edge (shared feature threshold, complementarity score, distance cutoff…). |
 | **Weight / similarity metric** | The numeric edge weight and its meaning (Jaccard, complementarity index, 1−distance…). |
@@ -49,19 +50,26 @@ Applying this rule deliberately *shrank* the catalog. The cuts are documented (�
 - **Why #1:** this is the most *novel* and most *ecologically mechanistic* organism–organism signal — it is what actually drives microbial community structure, not just similarity. It also subsumes the old "metabolite exchange" future layer.
 - **Caveats:** requires genomes/reconstructions (coverage-limited for uncultured taxa); complementarity predictions are models, not measurements; strain/genome-level source vs. species-level nodes needs rollup.
 
-### 3.2 Phylogeny — **GTDB — the control layer (essential, but not a discovery layer)**
+### 3.2 Abundance co-occurrence — **observed ecology (core; promoted per [`08`](08_decisions.md) C1)**
+- **Sources (new weavers / ingestion):** human-gut-relevant abundance profiles — **`curatedMetagenomicData`** and **GMrepo** abundance — prioritized over environmental **Earth Microbiome Project**; **MicrobeAtlas** for breadth [[20]](refs.md).
+- **Edge:** inferred co-occurrence / co-exclusion between organisms across samples.
+- **Inference (correctness-critical):** abundances are **compositional**, so naive correlation is **forbidden**. Use **SPIEC-EASI**, **SparCC**, or **FlashWeave** [[22]](refs.md).
+- **Why core, and the key synergy:** this layer *observes* interaction, whereas the metabolic layer *predicts* it. **Congruence between predicted (metabolic complementarity) and observed (co-occurrence) interaction is a headline cross-layer analysis and a strong internal validation signal** ([`05`](05_validation.md)) — neither layer alone provides it.
+- **Caveat:** co-occurrence ≠ causation; sample-set composition and study batch effects confound; it is a genuine ecological signal but still a projection.
+
+### 3.3 Phylogeny — **GTDB — the control layer (essential, but not a discovery layer)**
 - **Source (new weaver):** **GTDB** [[14]](refs.md) — genome-based taxonomy with quantitative marker-gene distances (supersedes NCBI/SILVA lineage-depth as a distance).
 - **Edge:** organism–organism phylogenetic proximity (1 − normalized distance).
 - **Role:** the **mandatory null/confounder model**. Related taxa trivially share metabolism, traits, and disease patterns; every other layer's structure must be shown to *exceed* what phylogeny predicts. It is a baseline to beat, not a source of novel hypotheses.
 - **Caveat:** NCBI stays only as the ID-normalization backbone in Mind; GTDB is the phylogeny layer.
 
-### 3.3 Ecophysiology / traits — **merged niche layer**
+### 3.4 Ecophysiology / traits — **merged niche layer**
 - **Sources:** **BacDive** [[15]](refs.md) (existing weaver) **+ ProTraits** [[16]](refs.md) **+ Madin et al. trait DB** [[17]](refs.md), combined into one layer.
 - **Edge:** niche/trait overlap (oxygen tolerance, habitat, pH/temperature optima, motility, gram stain, sporulation, …) — weighted similarity over a harmonized trait vector.
 - **Why merged:** BacDive, ProTraits, and Madin are the *same modality* (microbial phenotype); keeping them separate would be three redundant layers. Merged, they maximize coverage.
 - **Caveat:** trait data is sparse and biased toward cultured organisms; many gut anaerobes are under-covered. Flagged sparse.
 
-### 3.4 Secondary metabolites / BGCs — **exploratory, second wave**
+### 3.5 Secondary metabolites / BGCs — **exploratory, second wave**
 - **Sources (new weavers):** **antiSMASH** / **gutSMASH** [[18]](refs.md) biosynthetic gene cluster catalogs.
 - **Edge:** organisms producing similar or complementary secondary metabolites (antibiotics, siderophores, bacteriocins) → potential chemically-mediated interaction.
 - **Why kept but deferred:** genuinely novel organism–organism signal (chemical warfare/cooperation), but genome-dependent and sparse. Develop **after** the top three layers are working.
@@ -81,7 +89,6 @@ Documented so the decisions are auditable and reversible:
 
 ## 5. Genuinely-future layers (sketched only)
 
-- **Abundance co-occurrence** — from real abundance datasets (**Earth Microbiome Project**, **MicrobeAtlas**) [[20]](refs.md). Arguably the *most direct* ecological organism–organism signal (co-occurrence across many samples), more direct than trait similarity — but it needs external abundance data ORDINA doesn't yet ingest. **Flagged high-value-pending.**
 - **Host-interaction** — organisms sharing host-cell/immune interaction partners.
 - **Strain resolution** — sub-species layers where strain-level genomes exist.
 
@@ -89,4 +96,4 @@ Each, if promoted, must satisfy the same factory contract (§1) and the relevanc
 
 ## 6. Summary
 
-Fewer, sharper layers, no redundant ones: **disease co-signature** (target), **metabolic** (top predictor), **phylogeny/GTDB** (control), **ecophysiology** (niche), **BGCs** (exploratory). Everything else was dropped, folded, demoted, or reclassified — on the record.
+Fewer, sharper layers, no redundant ones: **disease co-signature** (target), **metabolic** (predicted interaction, top), **abundance co-occurrence** (observed interaction — the predicted-vs-observed congruence is a headline result), **phylogeny/GTDB** (control), **ecophysiology** (niche), **BGCs** (exploratory). Everything else was dropped, folded, demoted, or reclassified — on the record. See [`08`](08_decisions.md) for the decisions that shaped this set.
