@@ -32,6 +32,7 @@ ORDINA turns microbiome–disease association *evidence* into an **organism-reso
 | [`docs/04_analysis_and_discovery.md`](docs/04_analysis_and_discovery.md) | General ways to mine the multiplex for novel findings. |
 | [`docs/05_validation.md`](docs/05_validation.md) | How to tell real signal from artifact. |
 | [`docs/06_open_questions.md`](docs/06_open_questions.md) | Honest unknowns to resolve as the plan matures. |
+| [`docs/07_stack.md`](docs/07_stack.md) | Technology stack: frontend, backend, database, graph/analysis libs, orchestration. |
 | [`docs/refs.md`](docs/refs.md) | Bibliography. |
 
 ## Status of decisions
