@@ -26,11 +26,16 @@ def test_build_universe_end_to_end(tmp_path: Path) -> None:
         app,
         [
             "build-universe",
-            "-a", str(FIXTURES / "associations.tsv"),
-            "-t", str(FIXTURES / "taxonomy.tsv"),
-            "-o", str(out),
-            "--disbiome-snapshot", "s1",
-            "--ncbi-version", "n1",
+            "-a",
+            str(FIXTURES / "associations.tsv"),
+            "-t",
+            str(FIXTURES / "taxonomy.tsv"),
+            "-o",
+            str(out),
+            "--disbiome-snapshot",
+            "s1",
+            "--ncbi-version",
+            "n1",
         ],
     )
     assert result.exit_code == 0, result.output
@@ -48,9 +53,12 @@ def test_build_universe_end_to_end(tmp_path: Path) -> None:
 def test_build_universe_is_reproducible(tmp_path: Path) -> None:
     args = lambda p: [  # noqa: E731
         "build-universe",
-        "-a", str(FIXTURES / "associations.tsv"),
-        "-t", str(FIXTURES / "taxonomy.tsv"),
-        "-o", str(p),
+        "-a",
+        str(FIXTURES / "associations.tsv"),
+        "-t",
+        str(FIXTURES / "taxonomy.tsv"),
+        "-o",
+        str(p),
     ]
     a, b = tmp_path / "a.json", tmp_path / "b.json"
     assert runner.invoke(app, args(a)).exit_code == 0

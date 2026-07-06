@@ -23,7 +23,9 @@ def _resolver() -> _FakeResolver:
     return _FakeResolver(
         {
             816: Taxon(taxid=816, rank="genus", name="Bacteroides"),
-            818: Taxon(taxid=818, rank="species", name="Bacteroides thetaiotaomicron", parent_genus=816),
+            818: Taxon(
+                taxid=818, rank="species", name="Bacteroides thetaiotaomicron", parent_genus=816
+            ),
             1350: Taxon(taxid=1350, rank="genus", name="Enterococcus"),
         }
     )
@@ -31,8 +33,20 @@ def _resolver() -> _FakeResolver:
 
 def _assocs() -> list[Association]:
     return [
-        Association(disease_meddra="10011401", taxid=818, direction="enriched", source="disbiome", evidence_ref="e1"),
-        Association(disease_meddra="10011401", taxid=1350, direction="depleted", source="disbiome", evidence_ref="e2"),
+        Association(
+            disease_meddra="10011401",
+            taxid=818,
+            direction="enriched",
+            source="disbiome",
+            evidence_ref="e1",
+        ),
+        Association(
+            disease_meddra="10011401",
+            taxid=1350,
+            direction="depleted",
+            source="disbiome",
+            evidence_ref="e2",
+        ),
     ]
 
 
@@ -47,7 +61,9 @@ def test_species_pulls_in_parent_genus() -> None:
 
 def test_version_is_deterministic_and_order_independent() -> None:
     u1 = build_universe(_assocs(), _resolver(), disbiome_snapshot="s1", ncbi_version="n1")
-    u2 = build_universe(list(reversed(_assocs())), _resolver(), disbiome_snapshot="s1", ncbi_version="n1")
+    u2 = build_universe(
+        list(reversed(_assocs())), _resolver(), disbiome_snapshot="s1", ncbi_version="n1"
+    )
     assert u1.version == u2.version
 
 
@@ -65,7 +81,13 @@ def test_index_is_per_rank_and_taxid_ordered() -> None:
 
 def test_unresolvable_taxid_is_skipped() -> None:
     assocs = _assocs() + [
-        Association(disease_meddra="x", taxid=999999, direction="enriched", source="disbiome", evidence_ref="e3")
+        Association(
+            disease_meddra="x",
+            taxid=999999,
+            direction="enriched",
+            source="disbiome",
+            evidence_ref="e3",
+        )
     ]
     u = build_universe(assocs, _resolver(), disbiome_snapshot="s1", ncbi_version="n1")
     assert 999999 not in {t.taxid for t in u.nodes}
