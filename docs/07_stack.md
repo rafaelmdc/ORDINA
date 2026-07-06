@@ -116,9 +116,9 @@ To respect "ease of implementation" and avoid the over-engineering trap:
 
 | Module | Stack footprint |
 |---|---|
-| **Mind** | Django + Postgres + DRF/Ninja read APIs; the relational system of record. |
+| **Mind** | Django + Postgres + Django Ninja read APIs; the relational system of record. |
 | **Retes** | Snapshot reader + igraph/graph-tool/MultiXrank/MolTi analysis, orchestrated by Nextflow; results materialized to Postgres/Arrow and served via Ninja to the React graph views. |
-| **Flux** | Python task queue (Prefect/Celery) + Redis + Braidworks weavers; source sync, taxon resolution, snapshot/graph recompute. Ground-up later. |
+| **Flux** | Python task queue (Prefect/Celery) + Redis + Braidworks connectors; source sync, taxon resolution, snapshot/graph recompute. Ground-up later. |
 | **Curia** | Django admin-derived review UI (or React screens over Ninja endpoints); review-state transitions on evidence. |
 
 ---

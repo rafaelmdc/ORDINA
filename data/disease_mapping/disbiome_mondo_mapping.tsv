@@ -1,0 +1,356 @@
+disbiome_disease	meddra_id	mondo_id	mondo_label	mesh_ids	match_method	confidence	status	meddra_corroborates	ambiguous	n_experiments
+Crohn's Disease	10011401	MONDO:0005011	Crohn disease	C536215|D003424	mondo_exact_synonym	0.95	confirmed			481
+Colorectal cancer	10061451	MONDO:0005575	colorectal cancer		mondo_label	1.0	confirmed			377
+Parkinson's Disease	10061536	MONDO:0005180	Parkinson disease	D010300	mondo_exact_synonym	0.95	confirmed			287
+periodontitis	10034539	MONDO:0005076	periodontitis	D010518	mondo_label	1.0	confirmed			287
+Obesity	10029883	MONDO:0011122	obesity disorder		mondo_exact_synonym	0.95	confirmed			267
+Type 2 Diabetes	10067585	MONDO:0005148	type 2 diabetes mellitus	D003924	mondo_exact_synonym	0.95	confirmed			246
+Caries	10012318	MONDO:0005276	dental caries	D003731	token_subset_narrower	0.75	review			243
+Ulcerative Colitis	10009900	MONDO:0005101	ulcerative colitis	D003093	mondo_label	1.0	confirmed			220
+HIV infection	10000807	MONDO:0005109	HIV infectious disease	D015658	mondo_exact_synonym	0.95	confirmed			206
+Cirrhosis	10019641	MONDO:0005155	cirrhosis of liver	D008103	mondo_exact_synonym	0.95	confirmed			188
+Cystic Fibrosis	10011762	MONDO:0009061	cystic fibrosis	D003550	mondo_label	1.0	confirmed	yes		173
+Irritable Bowel Syndrome	10023003	MONDO:0005052	irritable bowel syndrome	D043183	mondo_label	1.0	confirmed			166
+Autism spectrum disorders	10063844	MONDO:0005260	autism	D001321	token_subset_broader	0.75	review			156
+Psoriasis	10037153	MONDO:0005083	psoriasis	D011565	mondo_label	1.0	confirmed			147
+Autism	10080683	MONDO:0005260	autism	D001321	mondo_label	1.0	confirmed			136
+Chronic kidney disease	10064848	MONDO:0005300	chronic kidney disease	D007676	mondo_label	1.0	confirmed			134
+Asthma	10003553	MONDO:0004979	asthma	D001249	mondo_label	1.0	confirmed			133
+Smoking	10064066				UNMAPPED	0.0	unmapped			129
+Non-alcoholic fatty liver disease	10082249	MONDO:0013209	metabolic dysfunction-associated steatotic liver disease	D065626	mondo_exact_synonym	0.95	confirmed			117
+Bacterial vaginosis	10004055	MONDO:0005316	bacterial vaginosis	D016585	mondo_label	1.0	confirmed			115
+Rheumatoid Arthritis	10039073	MONDO:0008383	rheumatoid arthritis	D001172	mondo_label	1.0	confirmed			115
+Schizophrenia	10039626	MONDO:0005090	schizophrenia		mondo_label	1.0	confirmed			115
+Chronic Obstructive Pulmonary Disease	10009033	MONDO:0005002	chronic obstructive pulmonary disease	D029424	mondo_label	1.0	confirmed			113
+Aggressive periodontitis	10034539	MONDO:0980757	periodontitis, aggressive		token_subset_narrower	0.75	review			110
+Multiple Sclerosis	10028245	MONDO:0005301	multiple sclerosis	D009103	mondo_label	1.0	confirmed			105
+Sjögren Syndrome	10040767	MONDO:0010030	Sjogren syndrome	D012859	mondo_exact_synonym	0.95	confirmed			96
+Celiac Disease, Coaliac disease	10009839	MONDO:0005130	celiac disease	D002446	token_subset_broader	0.75	review			93
+Type 1 Diabetes	10067584	MONDO:0005147	type 1 diabetes mellitus	D003922	mondo_exact_synonym	0.95	confirmed			90
+Alcoholism	10001639	MONDO:0007079	alcohol dependence		mondo_exact_synonym	0.95	confirmed			85
+Oral cancer	10024535	MONDO:0023644	lip and oral cavity carcinoma		mondo_exact_synonym	0.95	confirmed			83
+Coronary artery disease	10011078	MONDO:0005010	coronary artery disorder	D003324	mondo_exact_synonym	0.95	confirmed			82
+Hepatocellular cancer	10073071	MONDO:0007256	hepatocellular carcinoma	D006528	mondo_exact_synonym	0.95	confirmed			82
+Systemic lupus erythematosus	10042945	MONDO:0007915	systemic lupus erythematosus	D008180	mondo_label	1.0	confirmed			76
+Clostridium difficile infection	10054236	MONDO:0000705	Clostridium difficile colitis	D004761	mondo_exact_synonym	0.95	confirmed			75
+Short Bowel Syndrome	10049416	MONDO:0015183	short bowel syndrome	D012778	mondo_label	1.0	confirmed	yes		71
+Aerobic vaginitis	10079528	MONDO:0002234	vaginitis	D014627	token_subset_broader	0.75	review			66
+Behcet's Disease	10004213	MONDO:0007191	Behcet disease	D001528	meddra_xref	0.8	confirmed	yes		65
+Periodontal disease	10034536	MONDO:0002635	periodontal disorder	D010510	mondo_exact_synonym	0.95	confirmed			65
+Gastric carcinoma	10017758	MONDO:0004950	gastric carcinoma		mondo_label	1.0	confirmed			64
+Pulmonary tubercolosis	10037440	MONDO:0006052	pulmonary tuberculosis	D014397	fuzzy_suggestion	0.6	review			62
+Primary sclerosing cholangitis	10008609	MONDO:0013433	primary sclerosing cholangitis		mondo_label	1.0	confirmed			61
+Atopic dermatitis	10012438	MONDO:0004980	atopic eczema	D003876	mondo_exact_synonym	0.95	confirmed			60
+Edentulism	10050585				UNMAPPED	0.0	unmapped			59
+Pancreatic cancer	10033609	MONDO:0009831	malignant pancreatic neoplasm		mondo_exact_synonym	0.95	confirmed			57
+Inflammatory Bowel Disease	10021972	MONDO:0005265	inflammatory bowel disease	D015212	mondo_label	1.0	confirmed			55
+Acne	10000496	MONDO:0011438	acne		mondo_label	1.0	confirmed			55
+Alzheimer's Disease	10012271	MONDO:0004975	Alzheimer disease	C536597|D000544	mondo_exact_synonym	0.95	confirmed			54
+Uveitits	10046851	MONDO:0020283	uveitis	D014605	meddra_xref	0.8	confirmed	yes		53
+Infantile eczema	10014198	MONDO:0004980	atopic eczema	D003876	token_subset_broader	0.75	review			51
+Primary sclerosing cholangitis-IBD	10008609	MONDO:0013433	primary sclerosing cholangitis		token_subset_broader	0.75	review			51
+Ankylosing spondylitis	10002556	MONDO:0005306	ankylosing spondylitis	D013167	mondo_label	1.0	confirmed			50
+Hepatitis B	10008910	MONDO:0005344	hepatitis B virus infection	D006509	mondo_exact_synonym	0.95	confirmed			50
+Gestational diabetes	10018209	MONDO:0005406	gestational diabetes	D016640	mondo_label	1.0	confirmed			49
+Hypertension	10020772	MONDO:0001134	essential hypertension	D000075222	token_subset_narrower	0.75	review			49
+Alcoholic hepatitis	10019717	MONDO:0001505	alcoholic hepatitis	D006519	mondo_label	1.0	confirmed			49
+Endometriosis	10014778	MONDO:0005133	endometriosis	D004715	mondo_label	1.0	confirmed			49
+Lung cancer	10023774	MONDO:0008903	lung cancer		mondo_label	1.0	confirmed			48
+Major depressive disorder	10012378	MONDO:0002009	major depressive disorder	D003865	mondo_label	1.0	confirmed			45
+Primary biliary cholangitis	10008604	MONDO:0005388	primary biliary cholangitis	D008105	mondo_label	1.0	confirmed			45
+Breast cancer	10006187	MONDO:0007254	breast cancer		mondo_label	1.0	confirmed			45
+Helicobacter pylori infection	10054263	MONDO:0010853	Helicobacter pylori infection, susceptibility to		token_subset_narrower	0.75	review			44
+Halitosis	10019058				UNMAPPED	0.0	unmapped			42
+Thyroid carcinoma	10066474	MONDO:0015075	thyroid gland carcinoma		mondo_exact_synonym	0.95	confirmed			42
+Bladder cancer	10005003	MONDO:0004986	urinary bladder carcinoma		mondo_related_synonym	0.85	review		yes	42
+Kidney stone	10023436	MONDO:0008171	nephrolithiasis	D053040	mondo_exact_synonym	0.95	confirmed			41
+Chlamydia	10061041				UNMAPPED	0.0	unmapped			41
+Oral potentially malignant disorder	10030961	MONDO:0006858	mouth disorder	D009059	token_subset_broader	0.75	review			41
+Obstructive sleep apnea-hypopnea syndrome	10040979	MONDO:0007147	obstructive sleep apnea syndrome	D020181	token_subset_broader	0.75	review			41
+Chronic Rhinosinusitis	10071399	MONDO:0006031	chronic rhinosinusitis		mondo_label	1.0	confirmed			39
+Laryngeal carcinoma	10023856	MONDO:0002358	laryngeal carcinoma		mondo_label	1.0	confirmed			38
+Colon adenomas	10048832	MONDO:0000527	colon adenoma		fuzzy_suggestion	0.6	review			38
+Pervasive developmental disorder NOS	10034739	MONDO:0000594	pervasive developmental disorder	D002659	token_subset_broader	0.75	review			38
+Preeclamsia	10036485	MONDO:0005081	preeclampsia	D011225	meddra_xref	0.8	confirmed	yes		37
+Sicca syndrome	10040633	MONDO:0010030	Sjogren syndrome	D012859	mondo_exact_synonym	0.95	confirmed			37
+Stevens-Johnson syndrome	10042033	MONDO:0018229	Stevens-Johnson syndrome	D013262	mondo_label	1.0	confirmed	yes		36
+Oral lichen planus	10030983	MONDO:0043923	lichen planus, oral	D017676	mondo_exact_synonym	0.95	confirmed			35
+Otitis Media	10033078	MONDO:0005441	otitis media	D010033	mondo_label	1.0	confirmed			34
+Autoimmune polyendocrine syndrome type 1		MONDO:0009411	autoimmune polyendocrine syndrome type 1		mondo_label	1.0	confirmed			34
+Generalized anxiety disorder	10002855	MONDO:0001942	generalized anxiety disorder		mondo_label	1.0	confirmed			34
+Kidney stone with hypertension	10020772	MONDO:0008171	nephrolithiasis	D053040	token_subset_broader	0.75	review			34
+Pouchitis	10036463	MONDO:0005312	pouchitis	D019449	mondo_label	1.0	confirmed			33
+Dandruff	10011859				UNMAPPED	0.0	unmapped			33
+Urogenital Schistosomiasis	10039603	MONDO:0015254	schistosomiasis	D012552	meddra_xref	0.8	confirmed	yes		33
+Sarcopenia	10063024				UNMAPPED	0.0	unmapped			33
+Interstitial cystitis	10011796	MONDO:0018301	interstitial cystitis	D018856	mondo_label	1.0	confirmed	yes		32
+Non alcoholic steatohepatitis	10053219	MONDO:0007027	metabolic dysfunction-associated steatohepatitis		mondo_exact_synonym	0.95	confirmed	yes		32
+Hepatic encephalopathy	10019660	MONDO:0001711	hepatic encephalopathy	D006501	mondo_label	1.0	confirmed			32
+Neuromyelitis optica	10077875	MONDO:0019100	neuromyelitis optica	D009471	mondo_label	1.0	confirmed			32
+Keratitis	10023332	MONDO:0003085	keratitis	D007634	mondo_label	1.0	confirmed			32
+Tongue cancer	10055109	MONDO:0004631	tongue cancer	D014062	mondo_label	1.0	confirmed			32
+Pancreatitis	10033645	MONDO:0004982	pancreatitis	D010195	mondo_label	1.0	confirmed			31
+Chronic alcoholic pancreatitis	10033649	MONDO:0003232	alcoholic pancreatitis	D019512	token_subset_broader	0.75	review			31
+Myasthenia gravis	10028417	MONDO:0009688	myasthenia gravis	D009157	mondo_label	1.0	confirmed	yes		31
+Atrial fibrillation	10003658	MONDO:0004981	atrial fibrillation	D001281	mondo_label	1.0	confirmed			31
+Covid-19		MONDO:0100096	COVID-19	C000657245|D000086382	mondo_label	1.0	confirmed			30
+Pregnancy	10036556	MONDO:0043759	abdominal ectopic pregnancy	D011269	token_subset_narrower	0.75	review			29
+Fibromyalgia	10048439	MONDO:0005546	fibromyalgia	D005356	mondo_label	1.0	confirmed			29
+Preterm birth	10036600				UNMAPPED	0.0	unmapped			28
+Hepatitis C	10019744	MONDO:0100371	acute hepatitis C virus infection		token_subset_narrower	0.75	review			28
+Recurrent tonsillitis	10044008	MONDO:0001039	tonsillitis	D014069	token_subset_broader	0.75	review			27
+Protracted bacterial bronchitis	10061736	MONDO:0003781	bronchitis	D001991	token_subset_broader	0.75	review			27
+Cholestasis	10008635	MONDO:0001751	cholestasis	D002779	mondo_label	1.0	confirmed			27
+Spinal cord injury	10041552	MONDO:0043797	spinal cord injury	D013119	mondo_label	1.0	confirmed			26
+Appendicitis	10003011	MONDO:0005649	appendicitis	D001064	mondo_label	1.0	confirmed			26
+Systemic sclerosis	10042953	MONDO:0005100	systemic sclerosis	D012595	mondo_label	1.0	confirmed	yes		25
+Microscopic colitis	10056979	MONDO:0000702	microscopic colitis	D046728	mondo_label	1.0	confirmed			25
+Mucosa-associated lymphoid tissue lymphoma	10025310	MONDO:0007650	MALT lymphoma		mondo_exact_synonym	0.95	confirmed			25
+Aphthous ulcer	10002959	MONDO:0005318	canker sore	D013281	mondo_exact_synonym	0.95	confirmed			24
+Heart failure	10019285	MONDO:0005252	heart failure	D006333	mondo_label	1.0	confirmed			24
+Polycystic Ovary Syndrome	10036049	MONDO:0008487	polycystic ovary syndrome	D011085	mondo_label	1.0	confirmed			24
+Macular degeneration	10025409	MONDO:0003004	macular degeneration	D008268	mondo_label	1.0	confirmed			24
+Amyotrophic lateral sclerosis	10002026	MONDO:0004976	amyotrophic lateral sclerosis	D000690	mondo_label	1.0	confirmed	yes		24
+Atherosclerosis	10003210	MONDO:0005311	atherosclerosis	D050197	mondo_label	1.0	confirmed			23
+Attention Deficit Hyperactivity Disorder	10003736	MONDO:0007743	attention deficit-hyperactivity disorder		mondo_label	1.0	confirmed			23
+Influenza A	10022000	MONDO:0005460	swine influenza		token_subset_narrower	0.75	review			23
+Hypopharyngeal cancer		MONDO:0005806	hypopharynx cancer	D007012	mondo_exact_synonym	0.95	confirmed			23
+Acquired Immunodeficiency Syndrome	10000565	MONDO:0012268	AIDS	D000163	token_subset_narrower	0.75	review			22
+Opisthorchis felineus infection	10030897	MONDO:0005550	infectious disease	D003141	token_subset_broader	0.75	review			22
+COPD Exacerbation	10010953	MONDO:0005002	chronic obstructive pulmonary disease	D029424	token_subset_broader	0.75	review			22
+Multiple system atrophy	10003694	MONDO:0007803	multiple system atrophy	D019578	mondo_label	1.0	confirmed			22
+Overactive bladder	10003629	MONDO:0006624	overactive bladder	D053201	mondo_label	1.0	confirmed			22
+Oropharyngeal cancer	10031096	MONDO:0004608	oropharynx cancer	D009959	mondo_exact_synonym	0.95	confirmed			22
+Cervical cancer	10062663	MONDO:0002974	cervical cancer		mondo_label	1.0	confirmed			21
+Constipation	10010774	MONDO:0002203	constipation disorder	D003248	mondo_exact_synonym	0.95	confirmed			21
+Pulmonary arterial hypertension	10037400	MONDO:0015924	pulmonary arterial hypertension	D000081029	mondo_label	1.0	confirmed			21
+Bipolar disorder	10057667	MONDO:0004985	bipolar disorder	D001714	mondo_label	1.0	confirmed			20
+Transient Ischemic Attack	10044390	MONDO:0005264	transient ischemic attack	D002546	mondo_label	1.0	confirmed			20
+Clostridium difficile associated disease	10009653				UNMAPPED	0.0	unmapped			20
+Pancreatic head cancer	10033605	MONDO:0009831	malignant pancreatic neoplasm		token_subset_broader	0.75	review			20
+Pressure ulcers	10077779	MONDO:0043839	ulcer disease	D014456	token_subset_broader	0.75	review			20
+Human end-stage renal disease	10038435	MONDO:0004375	end stage renal failure		token_subset_broader	0.75	review			20
+Azoospermia	10003883	MONDO:0100459	azoospermia	D053713	mondo_label	1.0	confirmed			19
+Juvenile idiopathic arthritis	10059176	MONDO:0011429	juvenile idiopathic arthritis	D001171	mondo_label	1.0	confirmed			18
+Hashimoto's thyroiditis	10019167	MONDO:0007699	Hashimoto thyroiditis	D050031	mondo_exact_synonym	0.95	confirmed			18
+Frailty	10063028				UNMAPPED	0.0	unmapped			18
+Acute lymphoblastic leukemia	10000846	MONDO:0004967	acute lymphoblastic leukemia		mondo_label	1.0	confirmed			18
+Allergy	10001738	MONDO:0005271	allergic disease	D006967	mondo_exact_synonym	0.95	confirmed			17
+Barrett's oesophagus	10004137	MONDO:0013662	Barrett esophagus	D001471	mondo_exact_synonym	0.95	confirmed			17
+Spondyloarthritis	10071400	MONDO:0005095	spondyloarthropathy		mondo_exact_synonym	0.95	confirmed			17
+Human papilloma virus infection	10066416	MONDO:0005161	human papilloma virus infection	D030361	mondo_label	1.0	confirmed			17
+Drug-resistant Epilepsy	10015037	MONDO:0005027	epilepsy	D004827	token_subset_broader	0.75	review			17
+Alcoholic cirrhosis	10001617	MONDO:0006644	alcoholic liver cirrhosis	D008104	mondo_exact_synonym	0.95	confirmed			17
+Glycogen storage disease	10061990	MONDO:0002412	disorder of glycogen metabolism	D006008	mondo_exact_synonym	0.95	confirmed	yes		17
+Seborrheic dermatitis	10039793	MONDO:0006608	seborrheic dermatitis	D012628	mondo_label	1.0	confirmed			17
+Colon polyps	10010003	MONDO:0021400	polyp of colon	D003111	fuzzy_suggestion	0.6	review			17
+E-smoking	10077387				UNMAPPED	0.0	unmapped			17
+Chronic fatigue syndrome	10008874	MONDO:0005404	myalgic encephalomeyelitis/chronic fatigue syndrome	D015673	mondo_exact_synonym	0.95	confirmed			16
+Necrotizing enterocolitis	10055667	MONDO:0005313	necrotizing enterocolitis	D020345	mondo_label	1.0	confirmed			16
+Autoimmune hepatitis	10003827	MONDO:0016264	autoimmune hepatitis	D019693	mondo_label	1.0	confirmed	yes		16
+Head/Neck cancer	10060121	MONDO:0010150	head and neck squamous cell carcinoma	C535575	meddra_xref	0.8	confirmed	yes		16
+Chagas' disease	10008384	MONDO:0001444	Chagas disease	D014355	mondo_label	1.0	confirmed			16
+Primary biliary cirrhosis	10004661	MONDO:0005388	primary biliary cholangitis	D008105	mondo_exact_synonym	0.95	confirmed	yes		16
+Trichomonas vaginalis infection	10045183	MONDO:0005993	Trichomonas vaginitis urogenital infection	D014247	token_subset_narrower	0.75	review			16
+Clonorchis sinensis infection	10009345	MONDO:0005550	infectious disease	D003141	token_subset_broader	0.75	review			16
+Anovulation	10002658	MONDO:0002775	anovulation	D000858	mondo_label	1.0	confirmed			16
+Silicosis	10040678	MONDO:0005960	silicosis	D012829	mondo_label	1.0	confirmed			16
+Invasive pneumococcal disease	10061353	MONDO:0010386	immunodeficiency 33	C536289|C567070	token_subset_narrower	0.75	review			16
+Diaper dermatitis	10012444	MONDO:0002406	dermatitis	D003872	token_subset_broader	0.75	review			16
+Bleeding gum	10018771				UNMAPPED	0.0	unmapped			16
+Migraine	10027599	MONDO:0005277	migraine disorder	D008881	mondo_exact_synonym	0.95	confirmed			16
+Coronary Heart Disease	10011078	MONDO:0005010	coronary artery disorder	D003324	mondo_exact_synonym	0.95	confirmed			15
+Kawasaki disease	10023320	MONDO:0012727	Kawasaki disease	D009080	mondo_label	1.0	confirmed	yes		15
+Intestinal metaplasia	10068411	MONDO:0100190	gastric intestinal metaplasia		mondo_exact_synonym	0.95	confirmed			15
+Ischemic stroke	10061256	MONDO:1060198	ischemic stroke		mondo_label	1.0	confirmed			15
+Idiopathic central precocious puberty	10058084	MONDO:0015713	idiopathic central precocious puberty		mondo_label	1.0	confirmed			15
+Atopic eczema	10014184	MONDO:0004980	atopic eczema	D003876	mondo_label	1.0	confirmed			14
+Vitiligo	10047642	MONDO:0008661	vitiligo	D014820	mondo_label	1.0	confirmed			14
+Postmenopausal	10051775	MONDO:0005298	osteoporosis	D010024	token_subset_narrower	0.75	review			14
+Atrophic gastritis	10003685	MONDO:0006665	chronic atrophic gastritis	D005757	mondo_exact_synonym	0.95	confirmed	yes		14
+Oral leukoplakia	10062037	MONDO:0004844	oral mucosa leukoplakia	D007972	mondo_exact_synonym	0.95	confirmed			14
+Urgency urinary incontinence	10046543				UNMAPPED	0.0	unmapped			14
+Severe fever with thrombocytopenia syndrome	10043554				UNMAPPED	0.0	unmapped			14
+Primary liver cancer	10036706	MONDO:0002691	liver cancer		mondo_exact_synonym	0.95	confirmed			14
+Posttraumatic stress syndrome	10036316	MONDO:0002254	syndromic disease	D013577	token_subset_broader	0.75	review			14
+Tuberculosis	10044755	MONDO:0018076	tuberculosis	D014376	mondo_label	1.0	confirmed	yes		13
+Pneumonia	10035735	MONDO:0005249	pneumonia	D011014	mondo_label	1.0	confirmed			13
+Disease-free		MONDO:0019366	free sialic acid storage disease	C538523	token_subset_narrower	0.75	review			13
+Idiopathic Pulmonary Fibrosis	10021240	MONDO:0800504	idiopathic pulmonary fibrosis	D054990	mondo_label	1.0	confirmed			13
+Idiopathic REM Sleep Behavior Disorder	10037841	MONDO:0005937	REM sleep behavior disorder	D020187	token_subset_broader	0.75	review			13
+Osteoarthritis	10031161	MONDO:0005178	osteoarthritis	D010003	mondo_label	1.0	confirmed			13
+Graves' disease	10018706	MONDO:0005364	Graves disease	D006111	mondo_label	1.0	confirmed			13
+Cardiac valve calcification		MONDO:0002123	calcinosis	D002114	token_subset_broader	0.75	review			13
+Biliary atresia	10004653	MONDO:0008867	biliary atresia	D001656	mondo_label	1.0	confirmed			13
+Alopecia universalis	10001767	MONDO:0800198	alopecia universalis		mondo_label	1.0	confirmed			13
+Idiopathic focal epilepsy	10015037	MONDO:0005384	focal epilepsy	D004828	token_subset_broader	0.75	review			13
+Dry eye syndrome	10013774	MONDO:0006733	dry eye syndrome	D007638|D015352	mondo_label	1.0	confirmed			13
+H1N1 Influenza	10069767	MONDO:0005460	swine influenza		mondo_exact_synonym	0.95	confirmed			13
+T2D with hypertension	10020772	MONDO:0005148	type 2 diabetes mellitus	D003924	token_subset_broader	0.75	review			12
+Graves' orbitopathy	10057889	MONDO:0001509	endocrine exophthalmos		mondo_exact_synonym	0.95	confirmed			12
+Alopecia areata	10001761	MONDO:0005340	alopecia areata	D000506	mondo_label	1.0	confirmed			12
+Metabolic syndrome	10052066	MONDO:0000816	abdominal obesity-metabolic syndrome	C535554	mondo_exact_synonym	0.95	confirmed			12
+Hepatitis B associated liver failure	10019731				UNMAPPED	0.0	unmapped			12
+Collagenous colitis	10009887	MONDO:0000703	collagenous colitis	D046729	mondo_label	1.0	confirmed			12
+Periodontal abscess		MONDO:0005227	abscess	D000038	token_subset_broader	0.75	review			12
+Chronic pancreatitis	10033649	MONDO:0005003	chronic pancreatitis	D050500	mondo_label	1.0	confirmed			12
+Hidradenitis suppurativa	10020040	MONDO:0006559	hidradenitis suppurativa	D017497	mondo_label	1.0	confirmed			12
+Acute fatty liver	10000746	MONDO:0016573	acute fatty liver of pregnancy	C537957	meddra_xref	0.8	confirmed	yes		12
+Excessive vomiting	10047700				UNMAPPED	0.0	unmapped			12
+Rectal Carcinoma	10010038	MONDO:0044937	rectal carcinoma		mondo_label	1.0	confirmed			11
+Anorexia Nervosa	10002649	MONDO:0005351	anorexia nervosa	D000856	mondo_label	1.0	confirmed			11
+Henoch-Schönlein Purpura	10019617				UNMAPPED	0.0	unmapped			11
+Granulomatosis with polyangiitis	10072579	MONDO:0012105	granulomatosis with polyangiitis	D014890	mondo_label	1.0	confirmed			11
+Arsenic exposure	10059556				UNMAPPED	0.0	unmapped			11
+Adolescent idiopathic scoliosis	10039722	MONDO:0005488	adolescent idiopathic scoliosis		mondo_label	1.0	confirmed			11
+Huntington's Disease	10070668	MONDO:0007739	Huntington disease	D006816	mondo_exact_synonym	0.95	confirmed	yes		11
+Invasive colorectal cancer	10052358	MONDO:0005575	colorectal cancer		token_subset_broader	0.75	review			11
+Neisseria gonorrhoeae infection	10062212	MONDO:0004277	gonorrhea	D006069	mondo_exact_synonym	0.95	confirmed			11
+Refractory celiac disease	10009839	MONDO:0018353	refractory celiac disease		mondo_label	1.0	confirmed			10
+Cutaneous burn	10053615	MONDO:0043519	burn	D002056	token_subset_broader	0.75	review			10
+Endometrial cancer	10014733	MONDO:0011962	endometrial cancer		mondo_label	1.0	confirmed			10
+Eosinophilic esophagitis	10064212	MONDO:0005361	eosinophilic esophagitis	D057765	mondo_label	1.0	confirmed	yes		10
+Cirrhosis with pneumonia	10019641	MONDO:0005155	cirrhosis of liver	D008103	token_subset_broader	0.75	review			10
+H7N9	10073987				UNMAPPED	0.0	unmapped			10
+Iron-deficiency anaemia	10022972	MONDO:0001356	iron deficiency anemia	D018798	mondo_label	1.0	confirmed			10
+Spleen deficiency syndrome	10041633	MONDO:0002254	syndromic disease	D013577	token_subset_broader	0.75	review			10
+Cystic fibrosis exacerbation	10068288	MONDO:0009061	cystic fibrosis	D003550	token_subset_broader	0.75	review			10
+Inactive Crohn's Disease	10011401	MONDO:0005011	Crohn disease	C536215|D003424	token_subset_broader	0.75	review			9
+Rett Syndrome	10077709	MONDO:0010726	Rett syndrome	D015518	mondo_label	1.0	confirmed			9
+Chronic prostatitis / Chronic pelvic pain syndrome	10034263	MONDO:0024317	chronic pain syndrome		token_subset_broader	0.75	review			9
+Liver fibrosis	10019668	MONDO:0100430	fibrotic liver disease		token_subset_narrower	0.75	review			9
+Cervicitis	10008323	MONDO:0002345	cervicitis	D002575	mondo_label	1.0	confirmed			9
+Idiopathic nephrotic syndrome	10029164	MONDO:0018170	idiopathic nephrotic syndrome		mondo_label	1.0	confirmed			9
+Hirschsprung's disease	10020109	MONDO:0018309	Hirschsprung disease	D006627	mondo_exact_synonym	0.95	confirmed			9
+Hand, foot and mouth disease	10019113	MONDO:0005779	hand, foot and mouth disease	D006232	mondo_label	1.0	confirmed			9
+Common Variable Immunodeficieny	10021449	MONDO:0015517	common variable immunodeficiency	D017074	meddra_xref	0.8	confirmed	yes		9
+Osteoporosis	10031282	MONDO:0005298	osteoporosis	D010024	mondo_label	1.0	confirmed			9
+Vogt-Koyagani-Harada disease	10082001				UNMAPPED	0.0	unmapped			9
+Extrinsic black stain	10043179				UNMAPPED	0.0	unmapped			9
+Functional dyspepsia	10064536	MONDO:0002268	dyspepsia	D004415	token_subset_broader	0.75	review			8
+Idiopathic infertility	10021926	MONDO:0700005	idiopathic		token_subset_broader	0.75	review			8
+Viral respiratory tract infection	10046306	MONDO:0024352	viral respiratory tract infection		mondo_label	1.0	confirmed			8
+Chronic ocular graft-versus-host disease	10074563	MONDO:0020547	chronic graft versus host disease		token_subset_broader	0.75	review			8
+Pemphigus vulgaris	10034280	MONDO:0008219	pemphigus vulgaris	C536645	mondo_label	1.0	confirmed			8
+Down syndrome	10013616	MONDO:0008608	Down syndrome	D004314	mondo_label	1.0	confirmed			8
+Wiskott-Aldrich syndrome	10047992	MONDO:0010518	Wiskott-Aldrich syndrome	D014923	mondo_label	1.0	confirmed	yes		8
+Esophageal cancer	10030155	MONDO:0007576	esophageal cancer		mondo_label	1.0	confirmed			7
+Wilson's Disease	10047988	MONDO:0010200	Wilson disease	D006527	mondo_exact_synonym	0.95	confirmed			7
+Tetratricopeptide repeat domain 7A deficiency					UNMAPPED	0.0	unmapped			7
+X-linked inhibitor of apoptosis deficiency	10056554				UNMAPPED	0.0	unmapped			7
+Rosacea	10039218	MONDO:0006604	rosacea	D012393	mondo_label	1.0	confirmed			7
+Lower respiratory tract infection	10024968				UNMAPPED	0.0	unmapped			7
+Meningococcal disease	10027274	MONDO:0005373	meningococcal infection	D008589	mondo_related_synonym	0.85	confirmed			7
+Kaposi's sarcoma	10023284	MONDO:0005055	Kaposi's sarcoma	D012514	mondo_label	1.0	confirmed	yes		7
+Hyperglycemia	10020635	MONDO:0002909	hyperglycemia	D006943	mondo_label	1.0	confirmed			7
+Primary Open-Angle Glaucoma	10030348	MONDO:0005338	open-angle glaucoma	D005902	mondo_exact_synonym	0.95	confirmed			6
+Aphthous stomatitis	10002958	MONDO:0004845	aphthous stomatitis		mondo_label	1.0	confirmed			6
+Psoriatic Arthritis	10076674	MONDO:0011849	psoriatic arthritis	D015535	mondo_label	1.0	confirmed			6
+Chronic lung disease	10061768	MONDO:0015274	chronic beryllium disease	D001607	token_subset_narrower	0.75	review			6
+Vulvar vestibulitis syndrome	10056651	MONDO:0002254	syndromic disease	D013577	token_subset_broader	0.75	review			6
+Bullous pemphigoid	10006567	MONDO:0019082	bullous pemphigoid	D010391	mondo_label	1.0	confirmed			6
+Sickle cell disease	10040641	MONDO:0011382	sickle cell disease	D000755	mondo_label	1.0	confirmed	yes		6
+Reactive arthritis	10003267	MONDO:0017376	reactive arthritis	D016918	mondo_label	1.0	confirmed	yes		6
+Atopic wheeze	10047921				UNMAPPED	0.0	unmapped			6
+Pelvic inflammatory disease	10034254	MONDO:0000922	pelvic inflammatory disease	D000292	mondo_label	1.0	confirmed			6
+Bronchiectasis	10006445	MONDO:0004822	bronchiectasis	D001987	mondo_label	1.0	confirmed			6
+Chronic rhinosinusitis with nasal polyps	10071399				UNMAPPED	0.0	unmapped			6
+Pediculosis	10034208	MONDO:0003472	lice infestation	D010373	mondo_exact_synonym	0.95	confirmed			6
+Gestational diabetes + hyperlipidemia	10018209	MONDO:0005406	gestational diabetes	D016640	token_subset_broader	0.75	review			6
+Intrahepatic Cholangiocarcinoma	10008593	MONDO:0003210	intrahepatic cholangiocarcinoma		mondo_label	1.0	confirmed			6
+Cerebral autosomal dominant arteriopathy with subcortical infarcts and leukoencephalopathy	10065555	MONDO:0000914	cerebral arteriopathy, autosomal dominant, with subcortical infarcts and leukoencephalopathy, type 1	D046589	mondo_related_synonym	0.85	confirmed			6
+Chronic stress	10042209				UNMAPPED	0.0	unmapped			6
+Genitourinary lichen sclerosus	10024434	MONDO:0006570	lichen disease		token_subset_broader	0.75	review			6
+Chronic urticaria	10052568	MONDO:0850230	chronic urticaria		mondo_label	1.0	confirmed			6
+Normal weight obesity	10029885	MONDO:0011122	obesity disorder		token_subset_broader	0.75	review			6
+Fatigue	10016256				UNMAPPED	0.0	unmapped			6
+Infective colitis	10078961	MONDO:0005292	colitis	D003092	token_subset_broader	0.75	review			5
+Blepharitis	10005148	MONDO:0004785	blepharitis	D001762	mondo_label	1.0	confirmed			5
+HIV-infected pneumonia	10020161	MONDO:0005249	pneumonia	D011014	token_subset_broader	0.75	review			5
+Denture Stomatitis	10042128	MONDO:0006723	denture stomatitis	D013282	mondo_label	1.0	confirmed			5
+Chronic Rhinosinusitis with cystic fibrosis	10071399				UNMAPPED	0.0	unmapped			5
+Gingivitis	10018292	MONDO:0002508	gingivitis	D005891	mondo_label	1.0	confirmed			5
+Liver transplant	10024714				UNMAPPED	0.0	unmapped			5
+Nongonococcal urethritis	10062903	MONDO:0005297	urethritis	D014526	mondo_related_synonym	0.85	confirmed			5
+Prediabetes	10065542	MONDO:0006920	prediabetes syndrome	D011236	mondo_exact_synonym	0.95	confirmed	yes		5
+Diverticular disease	10013534	MONDO:0000001	disease	D004194	token_subset_broader	0.75	review			5
+Allergic asthma	10001705	MONDO:0004784	allergic asthma		mondo_label	1.0	confirmed			5
+Budd-Chiari syndrome	10006537	MONDO:0010947	Budd-Chiari syndrome	D006502	mondo_label	1.0	confirmed	yes		5
+Maturity-onset diabetes of the young 2	10026948	MONDO:0007453	maturity-onset diabetes of the young type 2		token_subset_narrower	0.75	review			5
+Cleft palate	10009269	MONDO:0016064	cleft palate	D002972	mondo_label	1.0	confirmed	yes		5
+Cervical intraneoplasia					UNMAPPED	0.0	unmapped			5
+Recurrent miscarriage	10027649				UNMAPPED	0.0	unmapped			5
+Anti-N-methyl-D-aspartate receptor encephalitis	10014581	MONDO:0019956	encephalitis	D004660	meddra_xref	0.8	confirmed	yes		5
+Radiation enteritis	10017912	MONDO:0043579	enteritis	D004751	token_subset_broader	0.75	review			5
+Cancer cachexia	10006895	MONDO:0004992	cancer		token_subset_broader	0.75	review			5
+Primary immune thrombocytopenia	10043554	MONDO:0002048	thrombocytopenia due to immune destruction		token_subset_broader	0.75	review			5
+Biliary tract cancer	10061008	MONDO:0003060	biliary tract cancer		mondo_label	1.0	confirmed			5
+Juvenile Idiopathic Arthritis	10059176	MONDO:0011429	juvenile idiopathic arthritis	D001171	mondo_label	1.0	confirmed			4
+Trachoma	10044325	MONDO:0001249	trachoma	D014141	mondo_label	1.0	confirmed			4
+Osmotic diarrhea	10057036	MONDO:0000250	osmotic diarrheal disease		mondo_exact_synonym	0.95	confirmed			4
+Gastroenteritis	10017888	MONDO:0002269	gastroenteritis	D005759	mondo_label	1.0	confirmed			4
+T2D with hypertension and hyperlipidemia	10067585				UNMAPPED	0.0	unmapped			4
+Hirschsprung-associated enterocolitis	10014893	MONDO:0009172	enterocolitis	D004760	token_subset_broader	0.75	review			4
+Hyperlipidemia	10062060	MONDO:0021187	hyperlipidemia	D006949	mondo_label	1.0	confirmed			4
+Seminal hyperviscosity	10039940				UNMAPPED	0.0	unmapped			4
+Oligoasthenoteratozoospermia	10003883	MONDO:0850098	oligoasthenoteratozoospermia		mondo_label	1.0	confirmed			4
+Stomach cancer	10042080	MONDO:0001056	gastric cancer		mondo_exact_synonym	0.95	confirmed			4
+Palmoplantar pustulosis	10050185	MONDO:0015597	palmoplantar pustulosis		mondo_label	1.0	confirmed	yes		4
+Diarrhea	10012735	MONDO:0001673	diarrheal disease	D003967	mondo_exact_synonym	0.95	confirmed			4
+Familial Mediterranean fever	10016207	MONDO:0018088	familial Mediterranean fever	D010505	mondo_label	1.0	confirmed	yes		4
+Chronic liver disease	10077305	MONDO:0014082	cryptosporidiosis-chronic cholangitis-liver disease syndrome		token_subset_narrower	0.75	review			4
+Chronic mucocutaneous candidiasis	10028080	MONDO:0015279	chronic mucocutaneous candidiasis	D002178	mondo_label	1.0	confirmed			4
+Hyper IgE syndrome	10051040	MONDO:0018037	hyper-IgE syndrome		mondo_label	1.0	confirmed			4
+Severe congenital neutropenia	10029354	MONDO:0018542	severe congenital neutropenia		mondo_label	1.0	confirmed			4
+Antrochoanal polyps	10028756				UNMAPPED	0.0	unmapped			4
+Traumatic Brain Injury	10060690	MONDO:0858950	traumatic brain injury		mondo_label	1.0	confirmed			4
+Recurrent aphthous stomatitis	10002959	MONDO:0004845	aphthous stomatitis		token_subset_broader	0.75	review			4
+Atopy	10003645	MONDO:1012017	atopy, dog		token_subset_narrower	0.75	review			3
+Conjunctival scarring	10010733				UNMAPPED	0.0	unmapped			3
+Exacerbations of idiopathic pulmonary fibrosis	10067761	MONDO:0800504	idiopathic pulmonary fibrosis	D054990	token_subset_broader	0.75	review			3
+Viral Diarrhea	10051511	MONDO:0001673	diarrheal disease	D003967	token_subset_broader	0.75	review			3
+Reflux esophagitis	10017885	MONDO:0001409	esophagitis	D004941	token_subset_broader	0.75	review			3
+Chronic Rhinosinusitis with asthma	10071399	MONDO:0850282	chronic asthma		token_subset_broader	0.75	review			3
+Botulism	10006041	MONDO:0005498	botulism	D001906	mondo_label	1.0	confirmed	yes		3
+Hyperthyroidism	10020850	MONDO:0004425	hyperthyroidism	D006980	mondo_label	1.0	confirmed			3
+T2D with hyperlipidemia	10062060	MONDO:0021187	hyperlipidemia	D006949	token_subset_broader	0.75	review			3
+Shiga Toxin-producing E. coli infection	10070104				UNMAPPED	0.0	unmapped			3
+Prostate cancer	10060862	MONDO:0008315	prostate cancer	C537243|D011471	mondo_label	1.0	confirmed			3
+Infant colic	10021746				UNMAPPED	0.0	unmapped			3
+Urolithiasis	10046707	MONDO:0024647	urolithiasis	D052878	mondo_label	1.0	confirmed			3
+Laryngotracheal stenosis	10023862				UNMAPPED	0.0	unmapped			3
+Acute cerbral infarction	10008118				UNMAPPED	0.0	unmapped			3
+Diabetic nephropathy	10061835	MONDO:0005016	diabetic kidney disease	D003928	mondo_exact_synonym	0.95	confirmed			3
+Neuro-Behcet's disease	10029254	MONDO:0000001	disease	D004194	token_subset_broader	0.75	review			3
+Gastrointestinal follicular lymphoma	10078972	MONDO:0018906	follicular lymphoma	D008224	token_subset_broader	0.75	review			3
+Familial adenomatous polyposis	10056981	MONDO:0021055	classic familial adenomatous polyposis		mondo_exact_synonym	0.95	confirmed	yes		2
+Megaesophagus	10030136	MONDO:0001656	megaesophagus		mondo_label	1.0	confirmed			2
+Cardiovascular disease	10007649	MONDO:0004995	cardiovascular disorder	D002318	mondo_exact_synonym	0.95	confirmed			2
+Rhinovirus infection	10061494	MONDO:1014857	equine rhinovirus infection		token_subset_narrower	0.75	review			2
+Hutchinson-Gilford progeria syndrome	10036794	MONDO:0008310	Hutchinson-Gilford progeria syndrome		mondo_label	1.0	confirmed	yes		2
+Cytolytic vaginosis	10067498				UNMAPPED	0.0	unmapped			2
+Late-onset Sepsis	10040047				UNMAPPED	0.0	unmapped			2
+Chronic granulomatous disease	10008906	MONDO:0018305	chronic granulomatous disease	D006105	mondo_label	1.0	confirmed	yes		2
+Undernourishment	10061273				UNMAPPED	0.0	unmapped			2
+Giardia intestinalis infection	10018262	MONDO:0001103	giardiasis	D005873	token_subset_broader	0.75	review			2
+AA amyloidosis	10002022	MONDO:0019439	AA amyloidosis		mondo_label	1.0	confirmed			2
+Sepsis	10040047	MONDO:0700217	neonatal sepsis		token_subset_narrower	0.75	review			2
+Orofacial granulomatosis					UNMAPPED	0.0	unmapped			2
+Allergic rhinoconjunctivitis	10001728				UNMAPPED	0.0	unmapped			2
+Nasolacrimal duct obstruction	10029967	MONDO:7770473	nasolacrimal duct obstruction, alpaca		token_subset_narrower	0.75	review			2
+Cognitive impairment	10057668				UNMAPPED	0.0	unmapped			2
+Acute skin abscess	10000269	MONDO:0005227	abscess	D000038	token_subset_broader	0.75	review			1
+Granulomatous mastitis	10026883	MONDO:0018987	granulomatous mastitis	D058890	mondo_label	1.0	confirmed			1
+severe skin and soft tissue infection	10040872				UNMAPPED	0.0	unmapped			1
+Gastro-oesophageal reflux disease	10017885	MONDO:0007186	gastroesophageal reflux disease	D005764	fuzzy_suggestion	0.6	review			1
+Ascites	10003445	MONDO:7770031	ascites, cockatiel		token_subset_narrower	0.75	review			1
+Enthesitis-related arthritis	10072745	MONDO:0019437	enthesitis-related juvenile idiopathic arthritis		mondo_related_synonym	0.85	confirmed			1
+Neuropathic bladder	10029327	MONDO:0019395	Hinman syndrome		token_subset_narrower	0.75	review			1
+Small intestine neoplasm	10054184	MONDO:0004251	small intestine neoplasm		mondo_label	1.0	confirmed			1
+Sensitive scalp	10049120				UNMAPPED	0.0	unmapped			1
+Bronchiolitis	10006448	MONDO:0002465	bronchiolitis	D001988	mondo_label	1.0	confirmed			1
+Kostmann syndrome	10052213	MONDO:0012548	Kostmann syndrome	C537592	mondo_label	1.0	confirmed			1
+Miscarriage	10027649				UNMAPPED	0.0	unmapped			1
+Vestibulodynia					UNMAPPED	0.0	unmapped			1
+Folliculitis decalvans	10063921	MONDO:0018103	Quinquaud's folliculitis decalvans		mondo_related_synonym	0.85	confirmed			1
+Vulvodynia	10047781	MONDO:0021722	vulvodynia	D056650	mondo_label	1.0	confirmed			1

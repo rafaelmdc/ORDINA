@@ -31,7 +31,9 @@ Using more than one curated source lets ORDINA measure **cross-source concordanc
 
 ### Disease vocabulary: MONDO
 
-Sources use different disease vocabularies (Disbiome uses MedDRA). Mind **standardizes all of them onto MONDO** ([`08`](08_decisions.md) D1), mapping MedDRA and the other sources' codes into MONDO while **keeping source-native codes as provenance**. MONDO's cross-references (MedDRA/DO/EFO/OMIM) make the mapping tractable, and a common disease space is what makes cross-source concordance meaningful.
+Sources use different disease vocabularies (Disbiome uses MedDRA). Mind **standardizes all of them onto MONDO** ([`08`](08_decisions.md) D1), mapping the other sources' codes into MONDO while **keeping source-native codes as provenance**, with **MeSH as the practical bridge** (MONDO's MeSH cross-references are dense; its MedDRA ones are sparse because MedDRA is licensed). A common disease space is what makes cross-source concordance meaningful.
+
+**Sequencing (important for the build):** because iteration 1 is **Disbiome-only**, there is nothing to reconcile across sources yet, so **diseases are keyed by their native MedDRA code first** and MONDO is added as a normalization layer when a *second* disease source arrives. The `association` records therefore carry the native MedDRA code as the working key and a **nullable `disease_mondo`** populated progressively from the crosswalk — the **222 confirmed mappings** (77% of experiments) are available immediately; the rest follow a pending UMLS-based deterministic pass. The interim crosswalk and its method live in [`../data/disease_mapping/`](../data/disease_mapping/README.md). **This means MONDO is not a blocker for starting the build.**
 
 ### Abundance tables (for the co-occurrence layer)
 

@@ -33,9 +33,11 @@ ORDINA turns microbiome–disease association *evidence* into an **organism-reso
 | [`docs/05_validation.md`](docs/05_validation.md) | How to tell real signal from artifact. |
 | [`docs/06_open_questions.md`](docs/06_open_questions.md) | Honest unknowns (most now resolved in 08). |
 | [`docs/07_stack.md`](docs/07_stack.md) | Technology stack: frontend, backend, database, graph/analysis libs, orchestration. |
-| [`docs/08_decisions.md`](docs/08_decisions.md) | Resolved decisions: first goal, dual-rank, MONDO, co-occurrence promoted to core. |
+| [`docs/08_decisions.md`](docs/08_decisions.md) | Resolved decisions: first goal, dual-rank, MONDO, co-occurrence promoted to core, union node set, per-finding disease roles. |
+| [`docs/09_recovery_metric.md`](docs/09_recovery_metric.md) | The "does it work?" test: what we hide, how we score it, the baselines to beat, the exit bar. |
+| [`docs/10_architecture_and_roadmap.md`](docs/10_architecture_and_roadmap.md) | How the modules map to the stack for max reuse; the sequenced build plan with the go/no-go gate. |
 | [`docs/refs.md`](docs/refs.md) | Bibliography. |
 
 ## Status of decisions
 
-The scope, network model, and layer set are recorded at the top of each doc. The current headline decisions: **docs-only repo for now**; **organism-centric multiplex** as the primary framing (with a documented heterogeneous-multilayer pivot); and a **curated four-layer enrichment set** (metabolic, phylogeny-as-control, ecophysiology, BGCs) after an explicit relevance pass that dropped redundant candidates. See [`docs/03`](docs/03_layer_factory_and_catalog.md) for the reasoning behind every inclusion and cut.
+The scope, network model, and layer set are recorded at the top of each doc. The current headline decisions: **docs-only repo for now**; **organism-centric multiplex** as the primary framing (with a documented heterogeneous-multilayer pivot); and a **curated enrichment set** — metabolic, abundance co-occurrence (promoted to core, [`08`](docs/08_decisions.md) C1), phylogeny-as-control, ecophysiology, and BGCs (exploratory) — after an explicit relevance pass that dropped redundant candidates. Later decisions also fixed the **node set as the union of all taxa with a per-layer coverage mask** ([`08`](docs/08_decisions.md) B5) and the **per-finding roles of the disease data** ([`08`](docs/08_decisions.md) A4). See [`docs/03`](docs/03_layer_factory_and_catalog.md) for the reasoning behind every inclusion and cut.

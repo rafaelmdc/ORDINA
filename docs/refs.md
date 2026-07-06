@@ -12,7 +12,7 @@ Numbering is stable across all docs. Where I am not certain of exact bibliograph
 8. **GMrepo** — Wu S. et al. *GMrepo: a database of curated and consistently annotated human gut metagenomes.* Nucleic Acids Research. https://gmrepo.humangut.info
 9. **gutMDisorder** — Cheng L. et al. *gutMDisorder: a comprehensive database for dysbiosis of the gut microbiota in disorders and interventions.* Nucleic Acids Research. http://bio-annotation.cn/gutMDisorder
 10. **Hetionet** — Himmelstein D. et al. *Systematic integration of biomedical knowledge prioritizes drugs for repurposing.* eLife, 2017. https://doi.org/10.7554/eLife.26726
-11. **AGORA / Virtual Metabolic Human** — Magnúsdóttir S. et al. *Generation of genome-scale metabolic reconstructions for 773 members of the human gut microbiota* (AGORA), Nat Biotechnol 2017, https://doi.org/10.1038/nbt.3703 · Noronha A. et al. *The Virtual Metabolic Human database*, NAR 2019. https://www.vmh.life
+11. **AGORA2 / Virtual Metabolic Human** — Heinken A. et al. *Genome-scale metabolic reconstruction of 7,302 human microorganisms for personalized medicine* (AGORA2), Nat Biotechnol 2023, https://doi.org/10.1038/s41587-022-01628-0 · orig. Magnúsdóttir S. et al. *Generation of genome-scale metabolic reconstructions for 773 members of the human gut microbiota* (AGORA), Nat Biotechnol 2017, https://doi.org/10.1038/nbt.3703 · Noronha A. et al. *The Virtual Metabolic Human database*, NAR 2019. https://www.vmh.life  *(The Braidworks agora weaver bundles AGORA2, ~7,302 reconstructions.)*
 12. **HMDB** — Wishart D. et al. *HMDB: the Human Metabolome Database.* Nucleic Acids Research. https://hmdb.ca
 13. **Community metabolic modelling** — Zelezniak A. et al. *Metabolic dependencies drive species co-occurrence in diverse microbial communities* (SMETANA), PNAS 2015, https://doi.org/10.1073/pnas.1421834112 · Diener C. et al. *MICOM: metagenome-scale modeling of microbial communities*, mSystems 2020, https://doi.org/10.1128/mSystems.00606-19
 14. **GTDB** — Parks D. et al. *A standardized bacterial taxonomy based on genome phylogeny (Genome Taxonomy Database).* Nat Biotechnol, 2018/2020. https://gtdb.ecogenomic.org
@@ -29,4 +29,4 @@ Numbering is stable across all docs. Where I am not certain of exact bibliograph
 
 ---
 
-**Tooling referenced (not a scientific claim):** [Braidworks](https://github.com/rafaelmdc/braidworks) — biological data connector (weavers / strand routing) used as ORDINA's enrichment substrate.
+**Tooling referenced (not a scientific claim):** [Braidworks](https://github.com/rafaelmdc/braidworks) — the project's biological data-access library (per-source connectors + automatic multi-hop routing) used as ORDINA's enrichment substrate.

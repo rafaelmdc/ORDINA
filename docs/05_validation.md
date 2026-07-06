@@ -13,13 +13,17 @@ Every validation below targets one or more of these.
 
 ## 0. Recovery-first (the iteration-1 headline)
 
-Per [`08`](08_decisions.md) A1, the first thing ORDINA must show is **recovery of known associations that beats the phylogeny null on a held-out split**, with each recovered association annotated by the layers that explain it. This is the credibility gate: nothing about novel prediction is trustworthy until recovery is demonstrated. The recovery metric (held-out recall/precision vs the null) is the operational definition of "the multiplex works."
+Per [`08`](08_decisions.md) A1, the first thing ORDINA must show is **recovery of known associations that beats the phylogeny null on a held-out split**, with each recovered association annotated by the layers that explain it. This is the credibility gate: nothing about novel prediction is trustworthy until recovery is demonstrated. The recovery metric (held-out recall/precision vs the null) is the operational definition of "the multiplex works." **The full, buildable specification of that metric — what we hide, how we score it, the baselines to beat (phylogeny *and* study-effort), and the concrete exit bar — is [`09_recovery_metric.md`](09_recovery_metric.md).**
 
-## 1. Phylogeny null (the mandatory baseline)
+## 1. The mandatory baselines (phylogeny, study-effort, degree)
 
-**Test:** compare every module, congruent edge, and prediction against what the **GTDB phylogeny layer** alone would produce, and against **degree-preserving randomization** (configuration-model rewiring that keeps each node's degree per layer) [[6]](refs.md).
+**Test:** compare every module, congruent edge, and prediction against the null baselines, all defined operationally in the recovery metric ([`09`](09_recovery_metric.md) §5):
+- **Phylogeny null** — what the **GTDB phylogeny layer** alone would produce (related organisms trivially behave alike) [[14]](refs.md). Backed by a **propagation-only control** so a genus-rollup win can't masquerade as biology ([`09`](09_recovery_metric.md) §5).
+- **Study-effort null** — what "rank by how well-studied an organism is" alone would produce. This is the operational form of threat #2 above and the coverage audit's confirmed bias; a finding that doesn't beat it is rediscovering fame, not biology.
+- **Enrichment-coverage null** — rank by *how much biology a node carries* (layers present + enrichment degree). Its twin: study-effort captures disease-link fame, this captures data-availability fame (genomes/traits are themselves study-biased), and a finding must beat both to be disease-specific.
+- **Degree-preserving randomization** — configuration-model rewiring that keeps each node's degree per layer, to rule out hub-ness.
 
-**Establishes:** that a finding carries information *beyond* relatedness and *beyond* hub-ness.
+**Establishes:** that a finding carries information *beyond* relatedness, *beyond* study effort, *beyond* data availability, and *beyond* hub-ness.
 **Cannot establish:** biological truth — only that the signal isn't a trivial artifact. This is a necessary, not sufficient, gate. Nothing proceeds to reporting without passing it.
 
 ## 2. Temporal held-out validation

@@ -24,9 +24,10 @@ This is fundamentally different from a **heterogeneous / multilayer network** (�
 
 Each layer defines its own edge rule and weight (specified per layer in [`03`](03_layer_factory_and_catalog.md)). Cross-cutting requirements:
 
-- **Weights are comparable within a layer, not across layers by default.** A metabolic-complementarity score and a trait-Jaccard are not the same currency. Cross-layer weight normalization (rank-based, z-score within layer, or quantile) is required before any supra-adjacency computation and is an explicit open question.
+- **Weights are comparable within a layer, not across layers by default.** A metabolic-complementarity score and a trait-Jaccard are not the same currency. Cross-layer weight normalization is required before any supra-adjacency computation; the method is **resolved in [`08`](08_decisions.md) B2 — rank-based to [0,1] within each layer** (z-score rejected because it produces negatives that break the random walk; quantile-matching held in reserve), computed over measured edges only, sign kept in its own column.
 - **Signed / typed edges where meaningful.** The disease layer in particular is not a plain similarity — it can carry *concordant* (co-enriched or co-depleted) vs *discordant* (opposite direction) relations, and a **conflict summary** when studies disagree. Conflict is represented on the edge, never by duplicating the organism.
 - **Sparsity and null edges.** Absence of an edge can mean "no relation" or "no data". Layers must distinguish *measured-absent* from *unmeasured*, or downstream analysis will confuse missing genomes with genuine dissimilarity.
+- **Node set is the union, not the intersection** ([`08`](08_decisions.md) B5). `V` is **every** Disbiome taxon; a node with no data in layer α is simply *isolated* in α (unmeasured ≠ dissimilar), never dropped. Each layer carries a **coverage mask** and analyses run on its *measured-induced subgraph*; cross-layer congruence uses the **pairwise** overlap of the two layers compared, so no global intersection is ever needed. Genus-primary rollup (§2) lifts effective coverage — a genus is measured if any child species is — but propagation *up* the hierarchy is aggregation while imputation *down/across* is phylogenetic signal that must still beat the GTDB null (§6).
 
 ## 4. The disease question, resolved honestly
 

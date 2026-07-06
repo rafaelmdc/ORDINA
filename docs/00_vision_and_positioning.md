@@ -14,7 +14,7 @@ Three commitments distinguish it:
 
 1. **Provenance-first.** Every edge and annotation traces to a source record. Imported, candidate, and reviewed evidence never mix silently.
 2. **Organism-resolved and multiplex.** One organism is one node. Its relationships to other organisms are decomposed into *layers* — metabolic, ecological, phylogenetic, chemical — each an independent, reproducible view. Analysis happens *across* layers, not on one merged graph.
-3. **Reproducibly enriched.** Enrichment is not hand-annotation and not LLM extraction from prose. It is deterministic database federation through Braidworks weavers, so every layer can be rebuilt and audited.
+3. **Reproducibly enriched.** Enrichment is not hand-annotation and not LLM extraction from prose. It is deterministic database federation through Braidworks (the project's data-access library), so every layer can be rebuilt and audited.
 
 ## Competitive landscape
 
@@ -29,7 +29,7 @@ The microbiome-knowledge space already has several resources. ORDINA must be hon
 
 ### The sharp difference from MINERVA
 
-MINERVA is the closest neighbour and worth stating precisely. MINERVA scales *one* signal — microbe–disease co-mention in the literature — into a large flat graph, then does link prediction on it. Its edges are only as trustworthy as literature co-occurrence, and its structure is single-relation. ORDINA instead keeps the disease signal deliberately *small and curated* (Disbiome-grade), and puts its effort into **many orthogonal, mechanistic enrichment layers** among organisms. The disease layer is the thing we want to *explain and extend*, not the thing we scale. That makes ORDINA's central object a genuine multiplex (same nodes, many independent edge types) rather than a large single-relation KG — which in turn enables analyses (multiplex modularity, cross-layer congruence, multilayer random walks) that a flat KG structurally cannot run the same way [[5]](refs.md)[[6]](refs.md)[[7]](refs.md).
+MINERVA is the closest neighbour and worth stating precisely. MINERVA scales *one* signal — microbe–disease co-mention in the literature — into a large flat graph, then does link prediction on it. Its edges are only as trustworthy as literature co-occurrence, and its structure is single-relation. ORDINA instead keeps the disease signal deliberately *small and curated* (Disbiome-grade), and puts its effort into **many orthogonal, mechanistic enrichment layers** among organisms. The disease layer is the thing we want to *explain and extend*, not the thing we scale. That makes ORDINA's central object a genuine multiplex (same nodes, many independent edge types) rather than a large single-relation KG. The honest distinction is the **clean shared node set**: heterogeneous KGs can and do run random walks and community detection (MultiXrank itself is multilayer-general), but multiplex-*modularity* and cross-layer *congruence* — "is this organism module coherent across independent modalities?" — are well-posed only when every layer shares one node set, which a flat microbe–disease KG does not have [[5]](refs.md)[[6]](refs.md)[[7]](refs.md).
 
 ## The falsifiable value proposition
 
@@ -39,7 +39,7 @@ ORDINA earns its existence only if the multiplex structure produces something th
 2. **Novelty:** organisms strongly connected in enrichment layers (metabolic/ecological/chemical) but *absent* from the disease layer are enriched for genuine, later-confirmed disease associations — testable by temporal held-out and independent-source checks (see [`05_validation.md`](05_validation.md)).
 3. **Explanation:** for a known disease–organism association, the layers provide a candidate *mechanistic context* (shared pathway, niche, metabolite exchange) rather than a bare edge.
 
-If none of these beat a phylogeny null and a flat-graph baseline, the multiplex is decoration and we should say so. That test is built into the plan from the start.
+If none of these beat the baselines — a **phylogeny null** (related organisms trivially behave alike), a **study-effort null** (well-studied organisms show up everywhere — the bias the coverage audit confirmed), and a flat-graph baseline — the multiplex is decoration and we should say so. That test is the recovery metric ([`09_recovery_metric.md`](09_recovery_metric.md)) and it is built into the plan from the start.
 
 ## Scope of this repository
 
