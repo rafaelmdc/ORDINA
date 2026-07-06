@@ -1,0 +1,51 @@
+[project]
+name = "ordina"
+version = "0.0.0"
+description = "ORDINA — Organism-Resolved Disease Interaction Network Atlas (workspace root)"
+requires-python = ">=3.12"
+readme = "README.md"
+
+# The root project is a meta-package: it pulls in the workspace members so a single
+# `uv sync` at the repo root prepares the whole monorepo for development.
+dependencies = [
+    "ordina-core",
+    "ordina-retes",
+]
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.uv.sources]
+ordina-core = { workspace = true }
+ordina-retes = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "ruff>=0.6",
+    "mypy>=1.11",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+# Pre-existing standalone data-prep scripts, not part of the workspace packages.
+extend-exclude = ["data"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# Typer's Option/Argument defaults are calls by design — B008 is a false positive here.
+"**/cli.py" = ["B008"]
+# Test fixtures use wide single-line rows for readability.
+"**/tests/*.py" = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+testpaths = ["packages"]
+addopts = "-q"

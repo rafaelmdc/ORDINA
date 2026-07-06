@@ -1,0 +1,5 @@
+taxid	rank	name	parent_genus
+816	genus	Bacteroides
+818	species	Bacteroides thetaiotaomicron	816
+1350	genus	Enterococcus
+543	family	Enterobacteriaceae

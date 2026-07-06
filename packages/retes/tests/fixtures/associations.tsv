@@ -1,0 +1,4 @@
+disease_meddra	taxid	direction	source	evidence_ref	disease_mondo
+10011401	818	enriched	disbiome	exp:1	MONDO:0005011
+10011401	1350	depleted	disbiome	exp:2	MONDO:0005011
+10061451	816	enriched	disbiome	exp:3	MONDO:0005575
