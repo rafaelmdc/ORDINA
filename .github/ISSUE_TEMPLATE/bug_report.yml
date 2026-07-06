@@ -1,0 +1,43 @@
+name: Bug report
+description: Something in the code (core, retes, CLI, pipeline) behaves incorrectly.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: For a wrong *scientific* decision or blueprint gap, use "Feature / research proposal" or "New layer proposal" instead.
+  - type: input
+    id: module
+    attributes:
+      label: Module
+      description: Where does it happen?
+      placeholder: core / retes / mind / flux / web / pipeline
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: The actual behaviour, including the full error / traceback if any.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Exact commands. Include the `ordina …` invocation and any input files.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Python version, `uv --version`, and the commit / branch.
+    validations:
+      required: false

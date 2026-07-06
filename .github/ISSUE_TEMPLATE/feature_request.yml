@@ -1,0 +1,31 @@
+name: Feature / research proposal
+description: A new capability, analysis, or change to the blueprint (not a new enrichment layer).
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / motivation
+      description: What can't be done today, and why it matters for ORDINA's goal (recover-and-explain, then discover).
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: input
+    id: slice
+    attributes:
+      label: Slice / module affected
+      placeholder: e.g. Slice 4 (enrichment layers), retes/analysis
+    validations:
+      required: false
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks / open questions
+      description: Especially data-leakage, phylogeny-confounding, or reproducibility concerns (docs 08, 09).
+    validations:
+      required: false

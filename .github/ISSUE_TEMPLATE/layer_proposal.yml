@@ -1,0 +1,60 @@
+name: New layer proposal
+description: Propose a new enrichment / network layer for the multiplex.
+labels: ["layer", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A layer is a `LayerFactory` (doc 10 A.3, doc 03). Fill the contract fields so the proposal
+        can be judged on coverage, reproducibility, and whether it can beat the phylogeny null.
+  - type: input
+    id: layer-id
+    attributes:
+      label: layer_id
+      placeholder: e.g. metabolic.complementarity
+    validations:
+      required: true
+  - type: textarea
+    id: signal
+    attributes:
+      label: What biological signal does it capture?
+      description: And is it *predicted* interaction, *observed* interaction, a trait/niche similarity, or a control/null?
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Data source + braidworks want-type / weaver
+      description: How the data is fetched. A source we lack = a new weaver in Braidworks, not code here (doc 10 A.4).
+      placeholder: e.g. microbe.metabolism.reactions (agora weaver)
+    validations:
+      required: true
+  - type: input
+    id: rank
+    attributes:
+      label: Native rank + aggregation rule to genus
+      description: Required by dual-rank (decision B1).
+      placeholder: e.g. strain → species → genus by union of reaction sets
+    validations:
+      required: true
+  - type: textarea
+    id: edges
+    attributes:
+      label: Edge rule, weight metric, directed?, signed?
+      description: How pairwise edges + weights are computed; whether edges are directed (exchange) or signed (co-exclusion).
+    validations:
+      required: true
+  - type: textarea
+    id: coverage
+    attributes:
+      label: Expected coverage & bias
+      description: Roughly what fraction of taxa get measured, and is it biased toward well-studied organisms? (decision D2)
+    validations:
+      required: false
+  - type: textarea
+    id: null-test
+    attributes:
+      label: Why would its signal survive the phylogeny null?
+      description: Propagation buys coverage, not evidence (decision B5). What makes this more than "related taxa look alike"?
+    validations:
+      required: false

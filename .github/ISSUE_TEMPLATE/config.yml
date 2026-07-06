@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Design docs (blueprint)
+    url: https://github.com/rafaelmdc/ORDINA/tree/main/docs
+    about: Read the vision, model, layer catalog, and roadmap before filing — many "why" questions are answered there.
+  - name: Open questions & resolved decisions
+    url: https://github.com/rafaelmdc/ORDINA/blob/main/docs/08_decisions.md
+    about: Check whether your question is an already-resolved decision.
