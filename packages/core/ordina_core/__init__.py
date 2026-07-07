@@ -7,6 +7,7 @@ the offline pipeline, the workers, and the web API can all import the same objec
 from __future__ import annotations
 
 from .association import Association, Direction
+from .layer import BuiltLayer, Coverage, Edge, LayerFactory, LayerManifest, normalize
 from .sources import Source, SourcePins
 from .taxon import Rank, Taxon
 from .taxonomy import TaxonomyResolver
@@ -14,7 +15,12 @@ from .universe import NodeUniverse, build_universe, compute_version
 
 __all__ = [
     "Association",
+    "BuiltLayer",
+    "Coverage",
     "Direction",
+    "Edge",
+    "LayerFactory",
+    "LayerManifest",
     "NodeUniverse",
     "Rank",
     "Source",
@@ -23,4 +29,5 @@ __all__ = [
     "TaxonomyResolver",
     "build_universe",
     "compute_version",
+    "normalize",
 ]
