@@ -139,7 +139,7 @@ braidworks.fetch(want: str | list[str], ids: list[str], *, have: str = "ncbi.tax
 #   FetchResult.column(t):  dict[id -> value]   # convenience for a single want-type
 ```
 
-`want` is a **target strand-type**, not a route string — the real produced keys, e.g. `"microbe.metabolism.reactions"` (agora weaver), `"microbe.trait.oxygen_tolerance"` (bacdive), `"microbe.ecology.functional_groups"` (faprotax), `"gtdb.patristic_distance"` (the new capability, [`03`](03_layer_factory_and_catalog.md) §3.3). Each `LayerFactory.build()`'s first step is one `fetch(want, ids)` call; nothing else in ORDINA opens a network connection. Pass a shared `registry` across a build to skip re-discovery. A source ORDINA lacks = a new weaver/capability added in Braidworks, not new code here.
+`want` is a **target strand-type**, not a route string — the real produced keys, e.g. `"microbe.metabolism.reactions"` (agora weaver), `"microbe.trait.oxygen_tolerance"` (bacdive), `"microbe.ecology.functional_groups"` (faprotax), `"gtdb.tree.rootpath"` (the new capability, [`03`](03_layer_factory_and_catalog.md) §3.3). Each `LayerFactory.build()`'s first step is one `fetch(want, ids)` call; nothing else in ORDINA opens a network connection. Pass a shared `registry` across a build to skip re-discovery. A source ORDINA lacks = a new weaver/capability added in Braidworks, not new code here.
 
 **Per-layer fetch map** (all `have="ncbi.taxon.id"`):
 
@@ -147,7 +147,7 @@ braidworks.fetch(want: str | list[str], ids: list[str], *, have: str = "ncbi.tax
 |---|---|---|---|
 | `metabolic.repertoire` | `microbe.metabolism.reactions` | agora (AGORA2) | Jaccard over reaction sets |
 | `ecophysiology` | `microbe.trait.*`, `microbe.ecology.functional_groups` | bacdive, faprotax | trait-vector similarity |
-| `phylogeny` | `gtdb.patristic_distance` *(new capability)* | gtdb | `1 − dist/diameter` (already pairwise) |
+| `phylogeny` | `gtdb.tree.rootpath` *(new capability)* | gtdb | `1 − dist/diameter`; pairwise cophenetic reduced client-side |
 | disease target | `microbe.disease.records` | disbiome | seed/truth sets + co-signature |
 
 `metabolic.complementarity` is **not** in this table — it is an offline solver step (SMETANA/MICOM over paired AGORA2 SBML), not a `fetch` (A.8, [`03`](03_layer_factory_and_catalog.md) §3.1).
@@ -164,12 +164,11 @@ def register(cls): LAYER_REGISTRY[cls.layer_id] = cls; return cls
 class PhylogenyLayer(LayerFactory):
     layer_id = "phylogeny.gtdb"
     def build(self, u, sources):
-        # gtdb.patristic_distance is already PAIRWISE (the one such want) — the new
-        # Braidworks capability that loads the GTDB reference tree (doc 03 §3.3).
-        res   = braidworks.fetch("gtdb.patristic_distance",
-                                 ids=[str(t.taxid) for t in u.species()],
-                                 params={"gtdb": {"pin": sources.pins["gtdb"]}})
-        edges = self._edges_from_distance(res.resolved, u)       # w_raw = 1 - dist/diameter, threshold
+        # Braidworks is per-entity, so we fetch each leaf's tree placement (gtdb.tree.rootpath)
+        # and do the PAIRWISE patristic reduction here, via gtdb_weaver.cophenetic (doc 03 §3.3).
+        res   = braidworks.fetch("gtdb.tree.rootpath",
+                                 ids=[str(t.taxid) for t in u.species()], registry=reg)
+        edges = self._genus_edges(res.resolved, u)               # cophenetic -> 1 - dist/maxdist
         cov   = self._coverage(res, u)                           # res.unresolved -> 'unmeasured'
         return BuiltLayer(manifest=..., edges=normalize(edges), coverage=cov)
 
@@ -295,8 +294,8 @@ Each slice runs end-to-end and produces a checkable artifact. The gate is Slice 
 - **Done when:** `ordina build-universe` emits a `universe.json` with genus+species nodes and a stable `version`; `ordina-core` has unit tests and imports with no Django.
 
 ### Slice 1 — One layer to a number (the harness is real)
-- **Prerequisite (Braidworks):** the **`gtdb.patristic_distance` capability** ([`03`](03_layer_factory_and_catalog.md) §3.3) — load the GTDB bac120/ar53 reference tree, return leaf-to-leaf patristic distance. Without it the phylogeny layer (and therefore the null the whole gate rests on) can't be built. RED-based distance is the acceptable interim if the tree work slips.
-- **Build:** `ordina-retes` registry; `PhylogenyLayer` (via `braidworks.fetch("gtdb.patristic_distance")`); `assemble()` → `Multiplex` (scipy.sparse); the full recovery harness (grouped k-fold, `predict` via RWR, `recall_at_k`/`auprc`, the nulls, bootstrap + permutation); `ordina recovery --layers phylogeny.gtdb`.
+- **Prerequisite (Braidworks) — ✅ done:** the reference-tree capability ([`03`](03_layer_factory_and_catalog.md) §3.3). Built as `gtdb_weaver`'s **`describe_gtdb_tree_placement` → `gtdb.tree.rootpath`** (per-entity leaf placement) plus the `gtdb_weaver.cophenetic` reducer, rather than a literal pairwise `gtdb.patristic_distance` want — Braidworks stays strictly per-entity (no core change), and the pairwise reduction lives in the layer. Live tree-URL / leaf-label capture is the one remaining E2E follow-up.
+- **Build — ✅ done:** `ordina-retes` registry; `PhylogenyLayer` (via `braidworks.fetch("gtdb.tree.rootpath")` + client-side cophenetic, genus-primary aggregation); `assemble()` → `Multiplex` (scipy.sparse); the full recovery harness (grouped k-fold, `predict` via RWR, `recall_at_k`/`r_precision`/`auprc`, the nulls, paired bootstrap + permutation); `ordina recovery --layers phylogeny.gtdb` → `recovery_report.json`. Braidworks is a git dependency; `--fixture` runs the whole slice offline.
 - **Runs end-to-end:** universe → build one layer → assemble → score vs baselines.
 - **Done when:** it prints Recall@k / AUPRC for `{phylogeny}` and the baselines; the phylogeny run ≈ the phylogeny baseline (sanity that the pipe is wired right); rebuilding the layer passes its `output_check` (exact digest); **and the harness passes a planted-signal discrimination test** — inject a synthetic layer wiring a known set of organisms to a fake disease's seeds and confirm the harness ranks them top while the baselines don't, *and* the label-permutation check collapses the signal. This proves the harness *discriminates*, not merely *runs*, before the real gate rides on it (finding 12).
 
