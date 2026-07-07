@@ -46,6 +46,12 @@ python_version = "3.12"
 strict = true
 plugins = ["pydantic.mypy"]
 
+# Braidworks is fully annotated but ships no py.typed marker yet, so mypy can't read its
+# types across the git dependency. Treat it as untyped here until it exports py.typed upstream.
+[[tool.mypy.overrides]]
+module = ["braidworks.*", "gtdb_weaver.*"]
+ignore_missing_imports = true
+
 [tool.pytest.ini_options]
 testpaths = ["packages"]
 addopts = "-q"
