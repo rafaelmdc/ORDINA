@@ -1,0 +1,8 @@
+disease_meddra	taxid	direction	source	evidence_ref
+D001	562	enriched	demo	e1
+D001	1905676	enriched	demo	e2
+D002	41978	depleted	demo	e3
+D002	3048838	depleted	demo	e4
+D003	562	enriched	demo	e5
+D003	41978	enriched	demo	e6
+D003	2053517	enriched	demo	e7
