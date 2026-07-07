@@ -88,7 +88,7 @@ wheels = [
 [[package]]
 name = "braidworks-core"
 version = "0.11.0"
-source = { git = "https://github.com/rafaelmdc/braidworks.git?subdirectory=braidworks-core&branch=feat%2Fgtdb-tree-placement#162a76d8f1e6a389d9898aab7766606599ecd9b4" }
+source = { git = "https://github.com/rafaelmdc/braidworks.git?subdirectory=braidworks-core&branch=feat%2Fgtdb-tree-placement#f2b5a79abc7ca7223d0929f2057cbe606499ab33" }
 dependencies = [
     { name = "networkx" },
     { name = "platformdirs" },
@@ -115,7 +115,7 @@ wheels = [
 [[package]]
 name = "gtdb-weaver"
 version = "0.2.0"
-source = { git = "https://github.com/rafaelmdc/braidworks.git?subdirectory=weavers%2Fgtdb_weaver&branch=feat%2Fgtdb-tree-placement#162a76d8f1e6a389d9898aab7766606599ecd9b4" }
+source = { git = "https://github.com/rafaelmdc/braidworks.git?subdirectory=weavers%2Fgtdb_weaver&branch=feat%2Fgtdb-tree-placement#f2b5a79abc7ca7223d0929f2057cbe606499ab33" }
 dependencies = [
     { name = "braidworks-core" },
     { name = "httpx" },
