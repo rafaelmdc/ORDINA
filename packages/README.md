@@ -32,3 +32,26 @@ uv run ordina build-universe \
 `build_universe` takes any `TaxonomyResolver` (protocol in `ordina_core.taxonomy`). Slice 0 uses
 `LocalTaxonomyResolver` over a TSV dump; the Braidworks-backed resolver (ncbi weaver) and the
 Disbiome `fetch` data path plug into the same seam next, without changing `build_universe`.
+
+## Slice 1 — one layer to a number (done)
+
+Build the GTDB phylogeny layer, assemble the sparse multiplex, and run the recovery harness
+(doc [`09`](../docs/09_recovery_metric.md)) to a `recovery_report.json`. `--fixture` runs the
+whole slice offline against Braidworks' bundled GTDB fixture (no download):
+
+```bash
+uv run ordina recovery \
+  -a packages/retes/tests/fixtures/recovery_associations.tsv \
+  -t packages/retes/tests/fixtures/recovery_taxonomy.tsv \
+  --fixture --k 2 -o recovery_report.json
+```
+
+The layer fetches each organism's `gtdb.tree.rootpath` from Braidworks (a **git dependency**,
+pinned in `uv.lock`) and reduces pairs to patristic distance via `gtdb_weaver.cophenetic`. The
+report scores the RWR predictor against the nulls (phylogeny, study-effort, degree, …) with a
+paired bootstrap CI + permutation test. With only the phylogeny layer the predictor **is** the
+phylogeny null, so Slice 1 honestly reports zero lift; the lift is what Slice 2's metabolic
+layer must produce at the go/no-go gate.
+
+For a real (non-fixture) run, point the layer at GTDB data with `--gtdb-auto-setup` (downloads
+the crosswalk + reference trees) or `--gtdb-db` / `--gtdb-tree`.
