@@ -8,6 +8,8 @@ dependencies = [
     "typer>=0.12",
     "braidworks-core",
     "gtdb-weaver",
+    "numpy>=1.26",
+    "scipy>=1.13",
 ]
 
 [project.scripts]

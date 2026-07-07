@@ -47,9 +47,10 @@ strict = true
 plugins = ["pydantic.mypy"]
 
 # Braidworks is fully annotated but ships no py.typed marker yet, so mypy can't read its
-# types across the git dependency. Treat it as untyped here until it exports py.typed upstream.
+# types across the git dependency. scipy's sparse stubs are too incomplete to type against.
+# Treat both as untyped (numpy stays typed); revisit braidworks once it exports py.typed.
 [[tool.mypy.overrides]]
-module = ["braidworks.*", "gtdb_weaver.*"]
+module = ["braidworks.*", "gtdb_weaver.*", "scipy.*"]
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]
