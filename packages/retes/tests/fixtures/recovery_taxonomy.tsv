@@ -1,0 +1,11 @@
+taxid	rank	name	parent_genus
+562	species	Escherichia coli	561
+1905676	species	Opacimonas sp.	1905675
+41978	species	Ruminococcus sp.	1263
+3048838	species	Avispirillum sp.	3048837
+2053517	species	JABGUH01 sp.	2053516
+561	genus	Escherichia
+1263	genus	Ruminococcus
+1905675	genus	Opacimonas
+2053516	genus	JABGUH01
+3048837	genus	Avispirillum
