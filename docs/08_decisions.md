@@ -64,7 +64,7 @@
   1. **`metabolic.repertoire`** (Jaccard over AGORA2 reaction sets) — function-sharing, feasible via `braidworks.fetch`, and the **Slice-2 gate layer**.
   2. **`metabolic.complementarity`** (SMETANA/MICOM community flux over paired AGORA2 SBML) — *predicted* interaction, the most mechanistic signal, but an **offline solver step, not a fetch**; second wave (Slice 4).
   3. **Abundance co-occurrence** (SPIEC-EASI/SparCC on curatedMetagenomicData/GMrepo) — *observed* ecology. **New core.** Its congruence with `metabolic.complementarity` is the headline cross-layer result — so that headline is iteration-1.5, since it needs both #2 and #3.
-  4. **Phylogeny / GTDB** — the control/null layer; needs the new `gtdb.patristic_distance` capability ([`03`](03_layer_factory_and_catalog.md) §3.3).
+  4. **Phylogeny / GTDB** — the control/null layer; built on the new `gtdb.tree.rootpath` capability (per-entity tree placement, pairwise patristic distance reduced client-side — [`03`](03_layer_factory_and_catalog.md) §3.3).
   5. **Ecophysiology** (BacDive + ProTraits + Madin + FAPROTAX functional groups) — niche overlap.
   6. **BGCs** (antiSMASH/gutSMASH) — exploratory, second wave.
   Plus the **disease co-signature** target layer (from Mind).
