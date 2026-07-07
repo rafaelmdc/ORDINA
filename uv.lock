@@ -87,8 +87,8 @@ wheels = [
 
 [[package]]
 name = "braidworks-core"
-version = "0.11.0"
-source = { git = "https://github.com/rafaelmdc/braidworks.git?subdirectory=braidworks-core&branch=feat%2Fgtdb-tree-placement#f2b5a79abc7ca7223d0929f2057cbe606499ab33" }
+version = "0.11.1"
+source = { git = "https://github.com/rafaelmdc/braidworks.git?subdirectory=braidworks-core&tag=gtdb_weaver-v0.2.0#036b543a12dac5c536e965662e0faffbe37968a2" }
 dependencies = [
     { name = "networkx" },
     { name = "platformdirs" },
@@ -115,7 +115,7 @@ wheels = [
 [[package]]
 name = "gtdb-weaver"
 version = "0.2.0"
-source = { git = "https://github.com/rafaelmdc/braidworks.git?subdirectory=weavers%2Fgtdb_weaver&branch=feat%2Fgtdb-tree-placement#f2b5a79abc7ca7223d0929f2057cbe606499ab33" }
+source = { git = "https://github.com/rafaelmdc/braidworks.git?subdirectory=weavers%2Fgtdb_weaver&tag=gtdb_weaver-v0.2.0#036b543a12dac5c536e965662e0faffbe37968a2" }
 dependencies = [
     { name = "braidworks-core" },
     { name = "httpx" },
@@ -427,8 +427,8 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "braidworks-core", git = "https://github.com/rafaelmdc/braidworks.git?subdirectory=braidworks-core&branch=feat%2Fgtdb-tree-placement" },
-    { name = "gtdb-weaver", git = "https://github.com/rafaelmdc/braidworks.git?subdirectory=weavers%2Fgtdb_weaver&branch=feat%2Fgtdb-tree-placement" },
+    { name = "braidworks-core", git = "https://github.com/rafaelmdc/braidworks.git?subdirectory=braidworks-core&tag=braidworks-core-v0.11.1" },
+    { name = "gtdb-weaver", git = "https://github.com/rafaelmdc/braidworks.git?subdirectory=weavers%2Fgtdb_weaver&tag=gtdb_weaver-v0.2.0" },
     { name = "numpy", specifier = ">=1.26" },
     { name = "ordina-core", editable = "packages/core" },
     { name = "scipy", specifier = ">=1.13" },
