@@ -6,6 +6,8 @@ requires-python = ">=3.12"
 dependencies = [
     "ordina-core",
     "typer>=0.12",
+    "braidworks-core",
+    "gtdb-weaver",
 ]
 
 [project.scripts]
@@ -20,3 +22,8 @@ packages = ["ordina_retes"]
 
 [tool.uv.sources]
 ordina-core = { workspace = true }
+# Braidworks is its own repo on GitHub; consumed here as a git dependency (the lockfile
+# pins the exact commit). `fetch` + the gtdb tree-placement capability feed the phylogeny
+# layer. Repoint to `main` / a release tag once these branches merge upstream.
+braidworks-core = { git = "https://github.com/rafaelmdc/braidworks.git", subdirectory = "braidworks-core", branch = "feat/gtdb-tree-placement" }
+gtdb-weaver = { git = "https://github.com/rafaelmdc/braidworks.git", subdirectory = "weavers/gtdb_weaver", branch = "feat/gtdb-tree-placement" }
